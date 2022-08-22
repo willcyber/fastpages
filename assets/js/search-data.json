@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Python Jupyter Tests",
-            "content": "Hello . you&#39;re old enough Hello Sam . car 3 bus 3 truck 5 bike 4 train 5 .",
+            "content": "print(&#39;Hello&#39;) . Hello . age = 24 if age &lt; 21: print(&quot;ur too young for beer kid&quot;) else: print(&quot;you&#39;re old enough&quot;) name = &quot;Sam&quot; if name == &quot;William&quot;: print(&quot;Hi William&quot;) elif name == &quot;Bob&quot;: Print(&quot;Hey Bob&quot;) elif name == &quot;Sam&quot;: print(&quot;Hello Sam&quot;) else: print(&quot;You aren&#39;t allowed here&quot;) . you&#39;re old enough Hello Sam . vehicles = [&quot;car&quot;, &quot;bus&quot;, &quot;truck&quot;, &quot;bike&quot;, &quot;train&quot;] for v in vehicles: print(v) print(len(v)) . car 3 bus 3 truck 5 bike 4 train 5 .",
             "url": "https://willcyber.github.io/fastpages/jupyter/2022/08/20/python.html",
             "relUrl": "/jupyter/2022/08/20/python.html",
             "date": " • Aug 20, 2022"
