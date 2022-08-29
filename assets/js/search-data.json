@@ -117,6 +117,17 @@
   
 
   
+      ,"page5": {
+          "title": "Bio Vocab",
+          "content": "Vocab . Evolution: The gradual process by which something changes into a different form. Natural Selection: the process by which certain traits make it more possible for an organism to survive. Species: a group of a type of organisms or animal .",
+          "url": "https://willcyber.github.io/fastpages/otherclass/",
+          "relUrl": "/otherclass/",
+          "date": ""
+      }
+      
+  
+
+  
 
   
 
@@ -136,7 +147,7 @@
   
 
   
-      ,"page12": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://willcyber.github.io/fastpages/robots.txt",
