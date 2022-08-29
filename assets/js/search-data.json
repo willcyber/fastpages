@@ -92,8 +92,8 @@
 
   
       ,"page1": {
-          "title": "PBL",
-          "content": "Week 0 . Week 1 .",
+          "title": "PBL Notes",
+          "content": "Week 0 . “Object Oriented Programming” focuses software design around data, or objects. “object” contains both methods and data “instance of a class” is the process of making an object, unique or instances of variables are created within the object “constructor” special method in class, code that is used to initialize the data within the object “getter” is a method that is used to extract or reference data from within the object. . Week 1 . _notoebooks is used for jupyter ntoebooks _posts for mardkdown files _pages creates subpages (stuff on navbar) images stored in the images folder .",
           "url": "https://willcyber.github.io/fastpages/pbl/",
           "relUrl": "/pbl/",
           "date": ""
