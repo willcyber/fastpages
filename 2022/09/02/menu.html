@@ -152,19 +152,8 @@ window.onload = wrap_img;
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Menu</span> <span class="p">{</span>
     <span class="c1">// Instance Variables</span>
     <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">DEFAULT</span> <span class="o">=</span> <span class="s">&quot;\u001B[0m&quot;</span><span class="p">;</span>  <span class="c1">// Default Terminal Color // final = not going to change, static means element is not changing (not part of the object)</span>
-    <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span><span class="o">[][]</span> <span class="n">COLORS</span> <span class="o">=</span> <span class="p">{</span> <span class="c1">// 2D Array of ANSI Terminal Colors</span>
-        <span class="p">{</span><span class="s">&quot;Default&quot;</span><span class="p">,</span><span class="n">DEFAULT</span><span class="p">},</span>
-        <span class="p">{</span><span class="s">&quot;Red&quot;</span><span class="p">,</span> <span class="s">&quot;\u001B[31m&quot;</span><span class="p">},</span> 
-        <span class="p">{</span><span class="s">&quot;Green&quot;</span><span class="p">,</span> <span class="s">&quot;\u001B[32m&quot;</span><span class="p">},</span> 
-        <span class="p">{</span><span class="s">&quot;Yellow&quot;</span><span class="p">,</span> <span class="s">&quot;\u001B[33m&quot;</span><span class="p">},</span> 
-        <span class="p">{</span><span class="s">&quot;Blue&quot;</span><span class="p">,</span> <span class="s">&quot;\u001B[34m&quot;</span><span class="p">},</span> 
-        <span class="p">{</span><span class="s">&quot;Purple&quot;</span><span class="p">,</span> <span class="s">&quot;\u001B[35m&quot;</span><span class="p">},</span> 
-        <span class="p">{</span><span class="s">&quot;Cyan&quot;</span><span class="p">,</span> <span class="s">&quot;\u001B[36m&quot;</span><span class="p">},</span> 
-        <span class="p">{</span><span class="s">&quot;White&quot;</span><span class="p">,</span> <span class="s">&quot;\u001B[37m&quot;</span><span class="p">},</span> 
-    <span class="p">};</span>
-    <span class="c1">// 2D column location for data</span>
-    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">NAME</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kd">public</span> <span class="kd">final</span> <span class="kt">int</span> <span class="n">ANSI</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>  <span class="c1">// ANSI is the &quot;standard&quot; for terminal codes</span>
+    
+
 
     <span class="c1">// Constructor on this Object takes control of menu events and actions</span>
     <span class="kd">public</span> <span class="nf">Menu</span><span class="p">()</span> <span class="p">{</span>
