@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      6 min read
     
 </span></p>
 
@@ -152,7 +152,6 @@ window.onload = wrap_img;
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Menu</span> <span class="p">{</span>
     <span class="c1">// Instance Variables</span>
     <span class="kd">public</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">DEFAULT</span> <span class="o">=</span> <span class="s">&quot;\u001B[0m&quot;</span><span class="p">;</span>  <span class="c1">// Default Terminal Color // final = not going to change, static means element is not changing (not part of the object)</span>
-    
 
 
     <span class="c1">// Constructor on this Object takes control of menu events and actions</span>
@@ -180,8 +179,8 @@ window.onload = wrap_img;
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;-------------------------\n&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Choose from these choices&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;-------------------------\n&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 - Say Hello&quot;</span><span class="p">);</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2 - Output colors&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;1 - Vidhi and Riya&#39;s Temp Convertor&quot;</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;2 - Lily&#39;s Average Calculator&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;3 - Modulus Calculator&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;4 - F=ma calculator&quot;</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;0 - Quit&quot;</span><span class="p">);</span>
@@ -194,16 +193,102 @@ window.onload = wrap_img;
 
         <span class="k">switch</span> <span class="p">(</span><span class="n">selection</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// Switch or Switch/Case is Control Flow statement and is used to evaluate the user selection</span>
             <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>  
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Goodbye, World!&quot;</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Goodbye! Thanks for checking this out :D&quot;</span><span class="p">);</span>
                 <span class="n">quit</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
                 <span class="k">break</span><span class="p">;</span>
             <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Hello, World!&quot;</span><span class="p">);</span>
-                <span class="k">break</span><span class="p">;</span>
+            <span class="n">Scanner</span> <span class="n">input3</span><span class="p">;</span>
+
+            <span class="c1">//we used a wrapper class to introduce our program to the user.</span>
+            <span class="n">String</span> <span class="n">aString</span> <span class="o">=</span> <span class="s">&quot;This is our program to convert Celcius to Kelvin. We are using it for our AP Chemistry class.&quot;</span><span class="p">;</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">aString</span><span class="p">);</span>
+    
+            <span class="c1">//we used the string to greet the user</span>
+            <span class="n">input3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your name as a string: &quot;</span><span class="p">);</span>
+            <span class="n">String</span> <span class="n">name</span> <span class="o">=</span> <span class="n">input3</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hello &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="p">);</span>
+            <span class="n">input3</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    
+            <span class="c1">//the integer is used to get the age of the user</span>
+            <span class="n">input3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter your age as an integer: &quot;</span><span class="p">);</span>
+            <span class="n">String</span> <span class="n">age</span> <span class="o">=</span> <span class="n">input3</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;You are &quot;</span> <span class="o">+</span> <span class="n">age</span> <span class="o">+</span> <span class="s">&quot; years old.&quot;</span> <span class="p">);</span>
+            <span class="n">input3</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    
+            <span class="c1">//boolean is used to get a true or false answer about whether the user is in AP Chemistry</span>
+            <span class="n">input3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Are you in AP Chemistry? Enter your answer as a Boolean: &quot;</span><span class="p">);</span>
+            <span class="n">String</span> <span class="n">chem</span> <span class="o">=</span> <span class="n">input3</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Your answer: &quot;</span> <span class="o">+</span> <span class="n">chem</span><span class="p">);</span>
+            <span class="n">input3</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    
+            <span class="c1">//double is used to get a number from the user and convert it using arithmetic expression</span>
+            <span class="n">input3</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter a degree in Celsius as a double: &quot;</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">celsius</span> <span class="o">=</span> <span class="n">input3</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="kt">double</span> <span class="n">kelvin</span> <span class="o">=</span> <span class="p">(</span><span class="n">celsius</span> <span class="o">+</span> <span class="mf">273.0</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span> <span class="n">celsius</span> <span class="o">+</span> <span class="s">&quot; degree Celsius is equal to &quot;</span> <span class="o">+</span> <span class="n">kelvin</span> <span class="o">+</span> <span class="s">&quot; in Kelvin&quot;</span><span class="p">);</span>
+            <span class="n">input3</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+                        <span class="k">break</span><span class="p">;</span>
+
             <span class="k">case</span> <span class="mi">2</span><span class="p">:</span>
-                <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">COLORS</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>  <span class="c1">// loop through COLORS array</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">COLORS</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">ANSI</span><span class="o">]</span> <span class="o">+</span> <span class="n">COLORS</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">NAME</span><span class="o">]</span><span class="p">);</span>
-                <span class="k">break</span><span class="p">;</span>
+            <span class="kt">double</span> <span class="n">numDouble</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="kt">double</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="c1">// count = n (sample size to determine mean)</span>
+            <span class="c1">// Sample size is always a whole number (ex: 1, 2, etc.)</span>
+            <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="kt">double</span> <span class="n">mean</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    
+            <span class="n">Scanner</span> <span class="n">sc</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Enter numbers, type &#39;end&#39; to finish&quot;</span><span class="p">);</span>
+    
+            <span class="k">while</span> <span class="p">(</span><span class="kc">true</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// String is used as the input for each number</span>
+                <span class="c1">// The reason why I didn&#39;t use int was because I wanted the user to </span>
+                <span class="c1">// be able to end the calculator by typing &quot;end&quot;</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Number: &quot;</span><span class="p">);</span>
+                <span class="n">String</span> <span class="n">numStr</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">();</span> 
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">numStr</span><span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span><span class="s">&quot;end&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">numStr</span><span class="p">))</span> <span class="p">{</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+                
+                <span class="c1">// This performs casting by changing the input, which was a string,</span>
+                <span class="c1">// into a double so that the mean can by determined</span>
+                <span class="n">numDouble</span> <span class="o">=</span> <span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">numStr</span><span class="p">);</span>  
+                <span class="n">sum</span> <span class="o">+=</span> <span class="n">numDouble</span><span class="p">;</span>
+                <span class="n">count</span><span class="o">++</span><span class="p">;</span>  
+                
+            <span class="p">}</span>
+            
+            <span class="n">mean</span> <span class="o">=</span> <span class="n">sum</span><span class="o">/</span><span class="n">count</span><span class="p">;</span>
+    
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Show detailed info? y/n&quot;</span><span class="p">);</span>
+            <span class="n">String</span> <span class="n">detail</span> <span class="o">=</span> <span class="n">sc</span><span class="p">.</span><span class="na">next</span><span class="p">();</span>
+            <span class="c1">// Setting showDetail as true/false, this can be used in the future</span>
+            <span class="c1">// as a toggle. (If showDetail = true, show more detail, otherwise,</span>
+            <span class="c1">// only show the result)</span>
+            <span class="c1">// Also showDetail can only be yes/no, so it can be set as a boolean</span>
+    
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">detail</span><span class="p">);</span>
+    
+            <span class="kt">boolean</span> <span class="n">showDetail</span><span class="p">;</span>
+            <span class="k">if</span> <span class="p">(</span><span class="s">&quot;y&quot;</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">detail</span><span class="p">))</span> <span class="p">{</span>
+                <span class="n">showDetail</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="n">showDetail</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="p">}</span>
+    
+            <span class="k">if</span> <span class="p">(</span><span class="n">showDetail</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sum: &quot;</span> <span class="o">+</span> <span class="n">sum</span><span class="p">);</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Count: &quot;</span> <span class="o">+</span> <span class="n">count</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mean: &quot;</span> <span class="o">+</span> <span class="n">mean</span><span class="p">);</span>
+
+                    <span class="k">break</span><span class="p">;</span>
             <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
             <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
 
@@ -234,7 +319,7 @@ window.onload = wrap_img;
     
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Modulus Calculator&quot;</span><span class="p">);</span>
             <span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="n">m1</span><span class="o">%</span><span class="n">m2</span><span class="p">;</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">m1</span> <span class="o">+</span> <span class="s">&quot; mod &quot;</span> <span class="o">+</span> <span class="n">m2</span> <span class="o">+</span> <span class="err">&#39;</span> <span class="o">=</span> <span class="err">&#39;</span> <span class="o">+</span> <span class="n">result</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">m1</span> <span class="o">+</span> <span class="s">&quot;mod&quot;</span> <span class="o">+</span> <span class="n">m2</span> <span class="o">+</span> <span class="sc">&#39;=&#39;</span> <span class="o">+</span> <span class="n">result</span><span class="p">);</span>
                     <span class="k">break</span><span class="p">;</span>
             <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
             <span class="c1">// java style to import library</span>
@@ -310,19 +395,50 @@ window.onload = wrap_img;
 Choose from these choices
 -------------------------
 
-1 - Say Hello
-2 - Output colors
-3 - Loading in color
+1 - Vidhi and Riya&#39;s Temp Convertor
+2 - Lily&#39;s Average Calculator
+3 - Modulus Calculator
 4 - F=ma calculator
 0 - Quit
 -------------------------
 
+1: This is our program to convert Celcius to Kelvin. We are using it for our AP Chemistry class.
+Enter your name as a string: 
+Hello william
+Enter your age as an integer: 
+You are 16 years old.
+Are you in AP Chemistry? Enter your answer as a Boolean: 
+Your answer: no
+Enter a degree in Celsius as a double: 
+25.0 degree Celsius is equal to 298.0 in Kelvin
+
+2: Enter numbers, type &#39;end&#39; to finish
+Number: 
+2
+Number: 
+5
+Number: 
+3
+Number: 
+end
+Show detailed info? y/n
+y
+Sum: 10.0
+Count: 3
+Mean: 3.3333333333333335
+
 3: Modulus calculator
-Enter your first number:4.0
-Enter the second number: 3.0
+Enter your first number:5.0
+Enter the second number: 2.0
 Modulus Calculator
-4.0mod3.0=1.0
-0: Goodbye, World!
+5.0mod2.0=1.0
+4: F=ma calculator
+Enter the mass: 
+3.0
+Enter the accel: 6.0
+Force calculator
+3.0*6.0=18.0
+0: Goodbye! Thanks for checking this out :D
 </pre>
 </div>
 </div>
