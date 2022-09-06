@@ -19,7 +19,7 @@ permalink: /pbl/
 
 ## Week 1
 
-_notoebooks is used for jupyter ntoebooks
+_notebooks is used for jupyter ntoebooks
 <br>
 _posts for mardkdown files
 <br>
@@ -27,3 +27,6 @@ _pages creates subpages (stuff on navbar)
 <br>
 images stored in the images folder
 <br>
+
+## Week 2
+
