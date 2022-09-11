@@ -408,13 +408,13 @@ Player Wins
  
 
         <span class="k">switch</span> <span class="p">(</span><span class="n">playerMove</span><span class="p">)</span> <span class="p">{</span>
+           
             <span class="k">case</span> <span class="n">ROCK</span><span class="p">:</span>
+             <span class="c1">// if user input ROCK</span>
                 <span class="k">if</span> <span class="p">(</span><span class="n">playerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">computerMove</span><span class="p">))</span>
                     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Game is Tie !!"</span><span class="p">);</span>
-            <span class="c1">// Player = Rock, Computer = Paper     </span>
                 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">playerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">ROCK</span><span class="p">)</span> <span class="o">&amp;&amp;</span>  <span class="n">computerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">PAPER</span><span class="p">))</span>
                      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Computer Wins"</span><span class="p">);</span>  
-            <span class="c1">// Player = Rock, Computer = Scissors  </span>
                 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">playerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">ROCK</span><span class="p">)</span> <span class="o">&amp;&amp;</span>  <span class="n">computerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">SCISSORS</span><span class="p">))</span>
                       <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Player Wins"</span><span class="p">);</span> 
                 <span class="k">else</span>
@@ -422,12 +422,11 @@ Player Wins
                 <span class="k">break</span><span class="p">;</span>
             
             <span class="k">case</span> <span class="n">PAPER</span><span class="p">:</span>
+            <span class="c1">// if user input is Paper</span>
                 <span class="k">if</span> <span class="p">(</span><span class="n">playerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">computerMove</span><span class="p">))</span>
-                     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Game is Tie !!"</span><span class="p">);</span>
-            <span class="c1">// Player = Rock, Computer = Paper     </span>
+                     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Game is Tie !!"</span><span class="p">);</span>   
                 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">playerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">PAPER</span><span class="p">)</span> <span class="o">&amp;&amp;</span>  <span class="n">computerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">SCISSORS</span><span class="p">))</span>
                      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Computer Wins"</span><span class="p">);</span> 
-            <span class="c1">// Player = Paper, Computer = Rock  </span>
                 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">playerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">PAPER</span><span class="p">)</span> <span class="o">&amp;&amp;</span>  <span class="n">computerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">ROCK</span><span class="p">))</span>
                      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Player Wins"</span><span class="p">);</span> 
                 <span class="k">else</span>
@@ -435,12 +434,11 @@ Player Wins
                 <span class="k">break</span><span class="p">;</span>
     
             <span class="k">case</span> <span class="n">SCISSORS</span><span class="p">:</span>
+            <span class="c1">// if user input is scissors</span>
                 <span class="k">if</span> <span class="p">(</span><span class="n">playerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">computerMove</span><span class="p">))</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Game is Tie !!"</span><span class="p">);</span>
-            <span class="c1">// Player = Rock, Computer = Paper     </span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Game is Tie !!"</span><span class="p">);</span> 
                 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">playerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">SCISSORS</span><span class="p">)</span> <span class="o">&amp;&amp;</span>  <span class="n">computerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">ROCK</span><span class="p">))</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Computer Wins"</span><span class="p">);</span> 
-            <span class="c1">// Player = Paper, Computer = Rock  </span>
+                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Computer Wins"</span><span class="p">);</span>  
                 <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">playerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">SCISSORS</span><span class="p">)</span> <span class="o">&amp;&amp;</span>  <span class="n">computerMove</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">Game</span><span class="p">.</span><span class="na">PAPER</span><span class="p">))</span>
                     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Player Wins"</span><span class="p">);</span> 
                 <span class="k">else</span>
