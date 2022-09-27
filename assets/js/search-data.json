@@ -2,11 +2,11 @@
   
     
         "post0": {
-            "title": "Jstable",
-            "content": ". .",
-            "url": "https://willcyber.github.io/fastpages/2022/09/26/jstable.html",
-            "relUrl": "/2022/09/26/jstable.html",
-            "date": " • Sep 26, 2022"
+            "title": "Javascript Table",
+            "content": "function TeamMembers(name, age, role) { this.name = name; this.age = age; this.role = role; } var team = [ new TeamMembers(&quot;Vidhi Kulkarni&quot;, 16, &quot;Scrum Master&quot;), new TeamMembers(&quot;Lily Wu&quot;, 16, &quot;DevOps&quot;), new TeamMembers(&quot;Riya Patil&quot;, 16, &quot;Frontend&quot;), new TeamMembers(&quot;William Wu&quot;, 16, &quot;Backend&quot;) ]; function Combine(team) { this.team = team; this.combine = []; this.team.forEach(people =&gt; {this.combine.push(people);}); } printTeam = new Combine(team); var outputHTML = &quot;&quot;; outputHTML += &quot;&lt;table&gt;&quot;; outputHTML += &quot;&lt;tr&gt;&quot;; outputHTML += &quot;&lt;td&gt;&quot; + &quot;Name&quot; + &quot;&lt;/td&gt;&quot;; outputHTML += &quot;&lt;td&gt;&quot; + &quot;Age&quot; + &quot;&lt;/td&gt;&quot;; outputHTML += &quot;&lt;td&gt;&quot; + &quot;Role&quot; + &quot;&lt;/td&gt;&quot;; outputHTML += &quot;&lt;/tr&gt;&quot;; var week = 0; for (var row of printTeam.combine) { outputHTML += &quot;&lt;tr&gt;&quot;; outputHTML += &quot;&lt;td&gt;&quot; + row.name + &quot;&lt;/td&gt;&quot;; outputHTML += &quot;&lt;td&gt;&quot; + row.age + &quot;&lt;/td&gt;&quot;; outputHTML += &quot;&lt;td&gt;&quot; + row.role + &quot;&lt;/td&gt;&quot;; outputHTML += &quot;&lt;/tr&gt;&quot;; } outputHTML += &quot;&lt;/table&gt;&quot;; . &#39;&lt;table&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Age&lt;/td&gt;&lt;td&gt;Role&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Vidhi Kulkarni&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;Scrum Master&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Lily Wu&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;DevOps&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Riya Patil&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;Frontend&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;William Wu&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;Backend&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#39; .",
+            "url": "https://willcyber.github.io/fastpages/jupyter/2022/09/25/jstable.html",
+            "relUrl": "/jupyter/2022/09/25/jstable.html",
+            "date": " • Sep 25, 2022"
         }
         
     
