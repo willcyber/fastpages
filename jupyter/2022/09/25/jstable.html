@@ -149,10 +149,10 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="kd">var</span> <span class="nx">team</span> <span class="o">=</span> <span class="p">[</span>
-        <span class="k">new</span> <span class="nx">TeamMembers</span><span class="p">(</span><span class="s2">"Vidhi Kulkarni"</span><span class="p">,</span> <span class="mf">16</span><span class="p">,</span> <span class="s2">"Scrum Master"</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">TeamMembers</span><span class="p">(</span><span class="s2">"Lily Wu"</span><span class="p">,</span> <span class="mf">16</span><span class="p">,</span> <span class="s2">"DevOps"</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">TeamMembers</span><span class="p">(</span><span class="s2">"Riya Patil"</span><span class="p">,</span> <span class="mf">16</span><span class="p">,</span> <span class="s2">"Frontend"</span><span class="p">),</span>
-        <span class="k">new</span> <span class="nx">TeamMembers</span><span class="p">(</span><span class="s2">"William Wu"</span><span class="p">,</span> <span class="mf">16</span><span class="p">,</span> <span class="s2">"Backend"</span><span class="p">)</span>
+        <span class="k">new</span> <span class="nx">TeamMembers</span><span class="p">(</span><span class="s2">"Vidhi Kulkarni"</span><span class="p">,</span> <span class="mf">4</span><span class="p">,</span> <span class="s2">"Scrum Master"</span><span class="p">),</span>
+        <span class="k">new</span> <span class="nx">TeamMembers</span><span class="p">(</span><span class="s2">"Lily Wu"</span><span class="p">,</span> <span class="mf">5</span><span class="p">,</span> <span class="s2">"DevOps"</span><span class="p">),</span>
+        <span class="k">new</span> <span class="nx">TeamMembers</span><span class="p">(</span><span class="s2">"Riya Patil"</span><span class="p">,</span> <span class="mf">4</span><span class="p">,</span> <span class="s2">"Frontend"</span><span class="p">),</span>
+        <span class="k">new</span> <span class="nx">TeamMembers</span><span class="p">(</span><span class="s2">"William Wu"</span><span class="p">,</span> <span class="mf">5</span><span class="p">,</span> <span class="s2">"Backend"</span><span class="p">)</span>
     <span class="p">];</span>
 
     <span class="kd">function</span> <span class="nx">Combine</span><span class="p">(</span><span class="nx">team</span><span class="p">)</span> <span class="p">{</span>
@@ -167,7 +167,7 @@ window.onload = wrap_img;
     <span class="nx">outputHTML</span> <span class="o">+=</span> <span class="s2">"&lt;table&gt;"</span><span class="p">;</span>
     <span class="nx">outputHTML</span> <span class="o">+=</span> <span class="s2">"&lt;tr&gt;"</span><span class="p">;</span>
     <span class="nx">outputHTML</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="s2">"Name"</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
-    <span class="nx">outputHTML</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="s2">"Age"</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
+    <span class="nx">outputHTML</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="s2">"# of classes"</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
     <span class="nx">outputHTML</span> <span class="o">+=</span> <span class="s2">"&lt;td&gt;"</span> <span class="o">+</span> <span class="s2">"Role"</span> <span class="o">+</span> <span class="s2">"&lt;/td&gt;"</span><span class="p">;</span>
     <span class="nx">outputHTML</span> <span class="o">+=</span> <span class="s2">"&lt;/tr&gt;"</span><span class="p">;</span>
 
@@ -194,7 +194,7 @@ window.onload = wrap_img;
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>'&lt;table&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;Age&lt;/td&gt;&lt;td&gt;Role&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Vidhi Kulkarni&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;Scrum Master&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Lily Wu&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;DevOps&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Riya Patil&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;Frontend&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;William Wu&lt;/td&gt;&lt;td&gt;16&lt;/td&gt;&lt;td&gt;Backend&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;'</pre>
+<pre>'&lt;table&gt;&lt;tr&gt;&lt;td&gt;Name&lt;/td&gt;&lt;td&gt;# of classes&lt;/td&gt;&lt;td&gt;Role&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Vidhi Kulkarni&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;Scrum Master&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Lily Wu&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;DevOps&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Riya Patil&lt;/td&gt;&lt;td&gt;4&lt;/td&gt;&lt;td&gt;Frontend&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;William Wu&lt;/td&gt;&lt;td&gt;5&lt;/td&gt;&lt;td&gt;Backend&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;'</pre>
 </div>
 
 </div>
