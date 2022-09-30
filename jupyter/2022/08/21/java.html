@@ -373,6 +373,9 @@ Test Again
 <span class="kt">double</span> <span class="n">Force</span><span class="p">;</span>
 <span class="kt">double</span> <span class="n">ac</span><span class="p">;</span>
 <span class="kt">double</span> <span class="n">m</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">mod1</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">mod2</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">result</span><span class="p">;</span>
 
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Menu</span> <span class="p">{</span>
@@ -442,56 +445,71 @@ Test Again
                     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">COLORS</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">ANSI</span><span class="o">]</span> <span class="o">+</span> <span class="n">COLORS</span><span class="o">[</span><span class="n">i</span><span class="o">][</span><span class="n">NAME</span><span class="o">]</span><span class="p">);</span>
                 <span class="k">break</span><span class="p">;</span>
             <span class="k">case</span> <span class="mi">3</span><span class="p">:</span>
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Loading..."</span><span class="p">);</span>
-                <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">30</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// fixed length loading bar</span>
-                    <span class="kt">int</span> <span class="n">random</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="n">COLORS</span><span class="p">.</span><span class="na">length</span><span class="p">);</span>  <span class="c1">// random logic</span>
-                    <span class="k">try</span> <span class="p">{</span>
-                        <span class="n">Thread</span><span class="p">.</span><span class="na">sleep</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>  <span class="c1">// delay for loading</span>
-                    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>
-                        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
-                    <span class="p">}</span>
-                    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">COLORS</span><span class="o">[</span><span class="n">random</span><span class="o">][</span><span class="n">ANSI</span><span class="o">]</span> <span class="o">+</span> <span class="s">"#"</span><span class="p">);</span>
-                <span class="p">}</span>
-                <span class="k">break</span><span class="p">;</span>
+            <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+
+            <span class="c1">// primitive int</span>
+            <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Modulos calculator"</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter your first number:"</span><span class="p">);</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="kt">double</span> <span class="n">mod1</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mod1</span><span class="p">);</span>
+                <span class="c1">// m = mod1;</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// if not an integer</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not an integer (form like 159), "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+            
+            <span class="c1">// primitive int</span>
+            <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter the second number: "</span><span class="p">);</span>
+            <span class="k">try</span> <span class="p">{</span>
+                <span class="kt">double</span> <span class="n">mod2</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mod2</span><span class="p">);</span>
+                <span class="c1">// ac = accel;</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// if not an integer</span>
+                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not an integer (form like 159), "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+    
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Modulos Calculator"</span><span class="p">);</span>
+            <span class="kt">double</span> <span class="n">result</span> <span class="o">=</span> <span class="n">mod1</span> <span class="o">%</span> <span class="n">mod2</span><span class="p">;</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">mod1</span> <span class="o">+</span> <span class="s">"modulos"</span> <span class="o">+</span> <span class="n">mod2</span> <span class="o">+</span> <span class="sc">'='</span> <span class="o">+</span> <span class="n">Force</span><span class="p">);</span>
+    <span class="k">break</span><span class="p">;</span>
             <span class="k">case</span> <span class="mi">4</span><span class="p">:</span>
             <span class="c1">// java style to import library</span>
 <span class="c1">// class must alway have 1st letter as uppercase, CamelCase is Java Class convention</span>
 
-        <span class="n">Scanner</span> <span class="n">input</span><span class="p">;</span>
+        <span class="n">Scanner</span> <span class="n">input4</span><span class="p">;</span>
 
         <span class="c1">// primitive int</span>
-        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">input4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"F=ma calculator"</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Enter the mass: "</span><span class="p">);</span>
         <span class="k">try</span> <span class="p">{</span>
-            <span class="kt">double</span> <span class="n">mass</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="kt">double</span> <span class="n">mass</span> <span class="o">=</span> <span class="n">input4</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">mass</span><span class="p">);</span>
             <span class="n">m</span> <span class="o">=</span> <span class="n">mass</span><span class="p">;</span>
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// if not an integer</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not an integer (form like 159), "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
         <span class="p">}</span>
-        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+        <span class="n">input4</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
         
         <span class="c1">// primitive int</span>
-        <span class="n">input</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+        <span class="n">input4</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Enter the accel: "</span><span class="p">);</span>
         <span class="k">try</span> <span class="p">{</span>
-            <span class="kt">double</span> <span class="n">accel</span> <span class="o">=</span> <span class="n">input</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+            <span class="kt">double</span> <span class="n">accel</span> <span class="o">=</span> <span class="n">input4</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">accel</span><span class="p">);</span>
             <span class="n">ac</span> <span class="o">=</span> <span class="n">accel</span><span class="p">;</span>
         <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="n">Exception</span> <span class="n">e</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// if not an integer</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Not an integer (form like 159), "</span> <span class="o">+</span> <span class="n">e</span><span class="p">);</span>
         <span class="p">}</span>
-        <span class="n">input</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+        <span class="n">input4</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
 
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Force calculator"</span><span class="p">);</span>
         <span class="kt">double</span> <span class="n">Force</span> <span class="o">=</span> <span class="n">m</span> <span class="o">*</span> <span class="n">ac</span><span class="p">;</span>
         <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">m</span> <span class="o">+</span> <span class="s">"*"</span> <span class="o">+</span> <span class="n">ac</span> <span class="o">+</span> <span class="sc">'='</span> <span class="o">+</span> <span class="n">Force</span><span class="p">);</span>
-
-    
-
-
-
 
                 <span class="k">break</span><span class="p">;</span>
                     
@@ -513,40 +531,6 @@ Test Again
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>-------------------------
-
-Choose from these choices
--------------------------
-
-1 - Say Hello
-2 - Output colors
-3 - Loading in color
-4 - Test
-0 - Quit
--------------------------
-
-2: Default<span class="ansi-red-fg">Red</span><span class="ansi-green-fg">Green</span><span class="ansi-yellow-fg">Yellow</span><span class="ansi-blue-fg">Blue</span><span class="ansi-magenta-fg">Purple</span><span class="ansi-cyan-fg">Cyan</span><span class="ansi-white-fg">White</span>
-3: Loading...<span class="ansi-white-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-magenta-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-red-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-magenta-fg">#</span>#<span class="ansi-cyan-fg">#</span><span class="ansi-magenta-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-green-fg">#</span><span class="ansi-red-fg">#</span>#<span class="ansi-white-fg">#</span>#<span class="ansi-white-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-magenta-fg">#</span><span class="ansi-blue-fg">#</span><span class="ansi-cyan-fg">#</span><span class="ansi-white-fg">#</span><span class="ansi-red-fg">#</span><span class="ansi-red-fg">#</span>
-4: F=ma calculator
-Enter the mass: 
-2.0
-Enter the accel: 3.0
-Force calculator
-2.0*3.0=6.0
-0: Goodbye, World!
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
