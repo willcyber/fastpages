@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "API",
-            "content": "Type of Weather Description City Names . &lt;td id=${weatherData.weather[0].main}&gt;&lt;/td&gt; &lt;td id=${weatherData.weather[0].description.toUpperCase()}&gt;&lt;/td&gt; &lt;td id=${weatherData.name}&gt;&lt;/td&gt; &lt;/tbody&gt; &lt;/table&gt; –&gt; .",
+            "content": "Type of Weather Description City Names . | | |",
             "url": "https://willcyber.github.io/fastpages/api",
             "relUrl": "/api",
             "date": " • Oct 2, 2022"

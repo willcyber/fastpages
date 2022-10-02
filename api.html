@@ -80,65 +80,98 @@ window.onload = wrap_img;
   </tr>
   </thead>
   <tbody>
-    &lt;td id=${weatherData.weather[0].main}&gt;&lt;/td&gt;
-    &lt;td id=${weatherData.weather[0].description.toUpperCase()}&gt;&lt;/td&gt;
-    &lt;td id=${weatherData.name}&gt;&lt;/td&gt;
+    <td id="type"></td>
+    <td id="description"></td>
+    <td id="city"></td>
     <!-- <td id="active_cases"></td> -->
   </tbody>
-</table>
-<!-- 
-<table>
-  <thead>
-  <tr>
-    <th>Country</th>
-    <th>All-time Cases</th>
-    <th>Recorded Deaths</th>
-    <th>Active Cases</th>
-  </tr>
-  </thead>
-  <tbody id="result">
-    <!-- generated rows -->
-<p>&lt;/tbody&gt;
-&lt;/table&gt; –&gt;</p>
 
 <!-- Script is layed out in a sequence (no function) and will execute when page is loaded -->
+
 <script>
-  const RAPIDAPI_KEY = import.meta.env.VITE_RAPIDAPI_KEY;
-const WEATHER_URL = "https://open-weather-map27.p.rapidapi.com/weather";
-const WEATHER_HOST = "open-weather-map27.p.rapidapi.com";
+  // prepare HTML result container for new output
+  const resultContainer = document.getElementById("result");
 
-const getData = async (url, host) => {
-    const response = await fetch(url, {
-        method: "GET",
-        headers: {
-            accept: "application/json",
-            "x-rapidapi-key": RAPIDAPI_KEY,
-            "x-rapidapi-host": host,
-        },
-    });
+  // prepare fetch options
+  const url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5";
 
-    if (!response. ok) {
-    throw new Error('HTTP error! status: ${response.status} ');
-    }
-    return await response.json();
-};
+  const options = {
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'omit', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  };
 
-const runApiQueries = async () => {
-    const app = document.getElementById("app");
-    //GET CITY NAME
-    const geoData = await getData(GEOLOCATION_URL, GEOLOCATION_HOST);
-    console.log(geoData);
-    //GET WEATHER DATA BY CITY
-    const weatherData = await getData(
-        WEATHER_URL + geoData.city.name,
-        WEATHER_HOST
-    );
-    console.log(weatherData);
-};
+  // fetch the API
+  fetch(url, options)
+    // response is a RESTful "promise" on any successful fetch
+    .then(response => {
+      // check for response errors
+      if (response.status !== 200) {
+          const errorMsg = 'Database response error: ' + response.status;
+          console.log(errorMsg);
+          const tr = document.createElement("tr");
+          const td = document.createElement("td");
+          td.innerHTML = errorMsg;
+          tr.appendChild(td);
+          resultContainer.appendChild(tr);
+          return;
+      }
+      // valid response will have json data
+      response.json().then(weatherData => {
+          console.log(weatherData);
+          console.log(weatherData.weather);
 
-runApiQueries();
+          // World Data
+          document.getElementById("type").innerHTML = weatherData.weather[0].main;
+          document.getElementById("description").innerHTML = weatherData.weather[0].description.toUpperCase()
+          document.getElementById("city").innerHTML = weatherData.name
+        //   document.getElementById("active_cases").innerHTML = data.world_total.active_cases;
+
+          // Country data
+          for (const row of data.countries_stat) {
+            console.log(row);
+
+            // tr for each row
+            const tr = document.createElement("tr");
+            // td for each column
+            const name = document.createElement("td");
+            const cases = document.createElement("td");
+            const deaths = document.createElement("td");
+            const active = document.createElement("td");
+
+            // data is specific to the API
+            name.innerHTML = row.country_name;
+            cases.innerHTML = row.cases; 
+            deaths.innerHTML = row.deaths; 
+            active.innerHTML = row.active_cases; 
+
+            // this build td's into tr
+            tr.appendChild(name);
+            tr.appendChild(cases);
+            tr.appendChild(deaths);
+            tr.appendChild(active);
+
+            // add HTML to container
+            resultContainer.appendChild(tr);
+          }
+      })
+  })
+  // catch fetch errors (ie ACCESS to server blocked)
+  .catch(err => {
+    console.error(err);
+    const tr = document.createElement("tr");
+    const td = document.createElement("td");
+    td.innerHTML = err;
+    tr.appendChild(td);
+    resultContainer.appendChild(tr);
+  });
 </script>
-
+</table>
 
       </div>
     </main><footer class="site-footer h-card">
