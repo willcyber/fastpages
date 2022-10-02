@@ -139,9 +139,9 @@ window.onload = wrap_img;
 
 <span class="c1">//RapidAPI header  https://rapidapi.com/spamakashrajtech/api/corona-virus-world-and-india-data</span>
 <span class="n">HttpRequest</span> <span class="n">request</span> <span class="o">=</span> <span class="n">HttpRequest</span><span class="p">.</span><span class="na">newBuilder</span><span class="p">()</span>
-    <span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="n">URI</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;https://corona-virus-world-and-india-data.p.rapidapi.com/api&quot;</span><span class="p">))</span>
+    <span class="p">.</span><span class="na">uri</span><span class="p">(</span><span class="n">URI</span><span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="s">&quot;https://jgentes-crime-data-v1.p.rapidapi.com/crime&quot;</span><span class="p">))</span>
     <span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="err">&#39;</span><span class="n">X</span><span class="o">-</span><span class="n">RapidAPI</span><span class="o">-</span><span class="n">Key</span><span class="err">&#39;</span><span class="p">:</span> <span class="err">&#39;</span><span class="mi">99055</span><span class="n">c6785msh0eec04755216d76p1d458djsnf1bc6a1c3b66</span><span class="err">&#39;</span><span class="p">)</span>
-    <span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="err">&#39;</span><span class="n">X</span><span class="o">-</span><span class="n">RapidAPI</span><span class="o">-</span><span class="n">Host</span><span class="err">&#39;</span><span class="p">:</span> <span class="err">&#39;</span><span class="n">corona</span><span class="o">-</span><span class="n">virus</span><span class="o">-</span><span class="n">world</span><span class="o">-</span><span class="n">and</span><span class="o">-</span><span class="n">india</span><span class="o">-</span><span class="n">data</span><span class="p">.</span><span class="na">p</span><span class="p">.</span><span class="na">rapidapi</span><span class="p">.</span><span class="na">com</span><span class="err">&#39;</span><span class="p">)</span>
+    <span class="p">.</span><span class="na">header</span><span class="p">(</span><span class="err">&#39;</span><span class="n">X</span><span class="o">-</span><span class="n">RapidAPI</span><span class="o">-</span><span class="n">Host</span><span class="err">&#39;</span><span class="p">:</span> <span class="err">&#39;</span><span class="n">jgentes</span><span class="o">-</span><span class="n">Crime</span><span class="o">-</span><span class="n">Data</span><span class="o">-</span><span class="n">v1</span><span class="p">.</span><span class="na">p</span><span class="p">.</span><span class="na">rapidapi</span><span class="p">.</span><span class="na">com</span><span class="err">&#39;</span><span class="p">)</span>
     <span class="p">.</span><span class="na">method</span><span class="p">(</span><span class="s">&quot;GET&quot;</span><span class="p">,</span> <span class="n">HttpRequest</span><span class="p">.</span><span class="na">BodyPublishers</span><span class="p">.</span><span class="na">noBody</span><span class="p">())</span>
     <span class="p">.</span><span class="na">build</span><span class="p">();</span>
 
@@ -248,6 +248,32 @@ window.onload = wrap_img;
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="n">OkHttpClient</span> <span class="n">client</span> <span class="o">=</span> <span class="k">new</span> <span class="n">OkHttpClient</span><span class="p">();</span>
+
+<span class="n">Request</span> <span class="n">request</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Request</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+	<span class="p">.</span><span class="na">url</span><span class="p">(</span><span class="s">&quot;https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&amp;lon=-78.5&quot;</span><span class="p">)</span>
+	<span class="p">.</span><span class="na">get</span><span class="p">()</span>
+	<span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;X-RapidAPI-Key&quot;</span><span class="p">,</span> <span class="s">&quot;99055c6785msh0eec04755216d76p1d458djsnf1bc6a1c3b66&quot;</span><span class="p">)</span>
+	<span class="p">.</span><span class="na">addHeader</span><span class="p">(</span><span class="s">&quot;X-RapidAPI-Host&quot;</span><span class="p">,</span> <span class="s">&quot;weatherbit-v1-mashape.p.rapidapi.com&quot;</span><span class="p">)</span>
+	<span class="p">.</span><span class="na">build</span><span class="p">();</span>
+
+<span class="n">Response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="na">newCall</span><span class="p">(</span><span class="n">request</span><span class="p">).</span><span class="na">execute</span><span class="p">();</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
