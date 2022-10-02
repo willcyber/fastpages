@@ -96,15 +96,12 @@ window.onload = wrap_img;
   const url = "https://weatherbit-v1-mashape.p.rapidapi.com/forecast/3hourly?lat=35.5&lon=-78.5";
 
   const options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'omit', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-  };
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '99055c6785msh0eec04755216d76p1d458djsnf1bc6a1c3b66',
+		'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+	}
+};
 
   // fetch the API
   fetch(url, options)
