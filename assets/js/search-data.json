@@ -2,11 +2,11 @@
   
     
         "post0": {
-            "title": "Crime API",
-            "content": "Title URL Image Source Orgin .",
-            "url": "https://willcyber.github.io/fastpages/crimeAPI",
-            "relUrl": "/crimeAPI",
-            "date": " • Oct 3, 2022"
+            "title": "Database video notes",
+            "content": "Video Notes . Overview . Spring Data JPA: abstracts all complexity needed to interact with databases. Works well with spring boot applications | JPA (Java Persistance API): accessing, persisting, and managing data between java objects | Hibernate: a popular implementation of JPA. Basically takes any java object and extracts it with ORM (object relational mapping). Makes it so that we have a java class which we can map to a database | . Application.properties . spring.datasource.url: connection to database (specify name) | spring.datasource.username: username, don&#39;t needa specify since local rn | spring.datasource.password: password, don&#39;t needa specify since local rn | spring.jpa.hibernate.ddl-auto=create-drop: create the schema and before the application shuts down, drop everything. We need this since we are testing various stuff with spring data JPA | spring.jpa.show-sql=true: so we can see the sql statements that hibernate generates | spring.jpa.propertoes.hibernate.dialect=org.hibermate.dialect.PostgreSQLDialect: Specifying the dialect to be Postgresql | spring.jpa.propertoes.hibernate.format_sql=true: sql is formatted | .",
+            "url": "https://willcyber.github.io/fastpages/jupyter/2022/10/08/databasenotes.html",
+            "relUrl": "/jupyter/2022/10/08/databasenotes.html",
+            "date": " • Oct 8, 2022"
         }
         
     
