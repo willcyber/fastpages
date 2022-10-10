@@ -142,7 +142,7 @@ window.onload = wrap_img;
               answerA_but.innerHTML = row.answerA;  // add fetched "haha count" to innerHTML
               answerA_but.onclick = function () {
                 // onclick function call with "like parameters"
-                reaction(answerA, like_url+row.id, answerA_but.id);  
+                reaction(answerA, answerA+row.id, answerA_but.id);  
               };
               answerA.appendChild(answerA_but);  // add "haha button" to haha cell
 
@@ -153,7 +153,7 @@ window.onload = wrap_img;
               answerB_but.innerHTML = row.answerB;  // add fetched "boohoo count" to innerHTML
               answerB_but.onclick = function () {
                 // onclick function call with "jeer parameters"
-                reaction(answerB, jeer_url+row.id, answerB_but.id);  
+                reaction(answerB, answerB+row.id, answerB_but.id);  
               };
               answerB.appendChild(answerB_but);  // add "boohoo button" to boohoo cell
 
