@@ -96,7 +96,7 @@ window.onload = wrap_img;
 
   // prepare fetch urls
   // const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
-  const url = "http://localhost:8085/api/quiz"; //placeholder
+  const url = "http://crimebusters.tk/api/quiz"; //placeholder
   const get_url = url +"/";
   const answerA_url = url + "/answerA/";  // haha reaction
   const answerB_url = url + "/answerB/";  // boohoo reaction
@@ -132,8 +132,8 @@ window.onload = wrap_img;
             const tr = document.createElement("tr");
 
             // td for joke cell
-            const joke = document.createElement("td");
-              joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
+            const quiz = document.createElement("td");
+              quiz.innerHTML = row.id + ". " + row.quiz;  // add fetched data to innerHTML
 
             // td for haha cell with onclick actions
             const answerA = document.createElement("td");
