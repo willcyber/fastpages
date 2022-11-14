@@ -25,7 +25,7 @@
     
         ,"post2": {
             "title": "Practice",
-            "content": "Variables . int a; double b; boolean c; a=4; b=1.2l c=false; .",
+            "content": "2015 frq . 1 a .",
             "url": "https://willcyber.github.io/fastpages/2022/10/26/recapofjava.html",
             "relUrl": "/2022/10/26/recapofjava.html",
             "date": " • Oct 26, 2022"
@@ -417,6 +417,9 @@
   
 
   
+  
+
+  
 
   
 
@@ -424,7 +427,7 @@
   
 
   
-      ,"page13": {
+      ,"page14": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://willcyber.github.io/fastpages/robots.txt",
