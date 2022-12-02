@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      7 min read
     
 </span></p>
 
@@ -664,33 +664,6 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>Creating a Class, describe Naming Conventions</li>
-<li>Constructor, describe why there is no return</li>
-<li>Accessor methods, relationship to getter</li>
-<li>Mutator methods, relationship to setter, describe void return type</li>
-<li>Static variables, Class variables, show use case in code</li>
-<li>Show use case of access modifiers: Public, Private, Protected</li>
-<li>Static methods, Class methods</li>
-<li>this Keyword</li>
-<li>main method, tester methods</li>
-<li>Inheritance, extends</li>
-<li>Subclass constructor, super Keyword</li>
-<li>Overloading a method, same name different parameters</li>
-<li>Overriding a method, same signature of a method</li>
-<li>Abstract Class, Abstract Method</li>
-<li>Standard methods: toString(), equals(), hashCode()</li>
-<li>Late binding of object, referencing superclass object, ie Animal a = new Chicken(); Animal b = new Goat();</li>
-<li>Polymorphism: any of overloading, overriding, late binding</li>
-<li>Big O notation for Hash map, Binary Search, Single loop, Nested Loop</li>
-</ul>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
 <li>Classes are created using the class keyword and the first letter is capitalized</li>
 <li>main method class is the tester. Automatically called</li>
 </ul>
@@ -807,6 +780,144 @@ window.onload = wrap_img;
 <li>getters and setters can both be seen in use in this code</li>
 <li>they get and set properties of an object</li>
 <li>this keywords gets access to properties of the class</li>
+<li>public = accessible anywhere</li>
+<li>private = accessible only in its own class</li>
+<li>static methods dont need an object. part of the class. only initialized once at the start of the execution</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Example</span> <span class="p">{</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">ex</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"no object needed"</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">){</span>
+        <span class="n">ex</span><span class="p">();</span>
+    <span class="p">}</span> 
+<span class="p">}</span>
+
+<span class="n">Example</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>no object needed
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>extends in when a class is inherited from a different class</li>
+<li>subclass = class that inherits</li>
+<li>superclass = class inherited from</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Super</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">ex</span><span class="p">()</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"test output"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sub</span> <span class="kd">extends</span> <span class="n">Super</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span> <span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+           <span class="n">Sub</span> <span class="n">ex1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Sub</span><span class="p">();</span>
+    <span class="n">ex1</span><span class="p">.</span><span class="na">ex</span><span class="p">();</span> 
+    <span class="p">}</span>
+
+    
+<span class="p">}</span>
+
+<span class="n">Sub</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>test output
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>toString() returns value to string. automatically ran. can be overrided</li>
+<li>
+<p>hashCode() returns the hash code of an object</p>
+</li>
+<li>
+<p>Polymorphism is when you have multiple methjods with the same name but different parameters.</p>
+</li>
+<li>Overloading is when you have multiple methods with the same name but different parameters.</li>
+<li>Overriding is when you have a method with the same name and parameters as a method in a superclass but you want to modify the method in the subclass.</li>
+<li>Late binding is when you have allow the compiler to determine which method to use at runtime instead of compile time.</li>
+<li>Big O notation tells you the number of operations an algorithm will make. Determines efficiancy</li>
 </ul>
 
 </div>
