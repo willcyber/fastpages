@@ -129,6 +129,11 @@
     <span class="n">doubleArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span><span class="mi">10</span><span class="p">);</span>
     <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">doubleArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
 <span class="p">}</span>
+
+<span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="mf">1.23</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="mf">1.23</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d1</span><span class="o">==</span><span class="n">d2</span><span class="p">);</span>
 </pre></div>
 
     </div>
@@ -141,11 +146,12 @@
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>2.201265646756765
-1.5046484901913482
-5.848631931362585
-0.18847040918566482
-5.444479179060762
+<pre>5.034024074855728
+3.6741190301445092
+6.1950605188782495
+1.391886610940728
+5.2659275010895445
+true
 </pre>
 </div>
 </div>
@@ -240,6 +246,175 @@
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Integer</span>
+
+<span class="n">Integer</span><span class="o">[]</span> <span class="n">intArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">intArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7
+8
+9
+9
+4
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// double</span>
+
+<span class="kt">double</span><span class="o">[]</span> <span class="n">doubleArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">intArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">doubleArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">doubleArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">Double</span>  <span class="n">d3</span> <span class="o">=</span> <span class="mf">1.23</span><span class="p">;</span>
+<span class="n">Double</span> <span class="n">d4</span> <span class="o">=</span> <span class="mf">1.23</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d3</span><span class="o">==</span><span class="n">d4</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>8.500996954871201
+3.723903884866029
+8.515467534961362
+5.8571742379986835
+5.705079810756255
+false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Boolean</span>
+
+<span class="n">Boolean</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">Boolean</span><span class="p">.</span><span class="na">TRUE</span><span class="p">;</span>
+<span class="n">Boolean</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">Boolean</span><span class="p">.</span><span class="na">FALSE</span><span class="p">;</span>
+<span class="n">Boolean</span> <span class="n">b3</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b1</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b2</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b3</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>true
+false
+true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Character</span>
+
+<span class="n">Character</span> <span class="n">letter</span> <span class="o">=</span> <span class="sc">'h'</span><span class="p">;</span>
+<span class="n">Character</span> <span class="n">letter2</span> <span class="o">=</span> <span class="sc">'e'</span><span class="p">;</span>
+<span class="n">Character</span> <span class="n">letter3</span> <span class="o">=</span> <span class="sc">'l'</span><span class="p">;</span>
+<span class="n">Character</span> <span class="n">letter4</span> <span class="o">=</span> <span class="sc">'o'</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">word</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">().</span><span class="na">append</span><span class="p">(</span><span class="n">letter</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">letter2</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">letter3</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">letter3</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">letter4</span><span class="p">).</span><span class="na">toString</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">word</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hello
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
