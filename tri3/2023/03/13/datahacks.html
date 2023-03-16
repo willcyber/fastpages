@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Data Types Hacks | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Data Types Hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://willcyber.github.io/fastpages/tri3/2023/03/13/datahacks.html" />
+<meta property="og:url" content="https://willcyber.github.io/fastpages/tri3/2023/03/13/datahacks.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:image" content="https://willcyber.github.io/fastpages/images/chart-preview.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-13T00:00:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://willcyber.github.io/fastpages/images/chart-preview.png" />
+<meta property="twitter:title" content="Data Types Hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-03-13T00:00:00-05:00","datePublished":"2023-03-13T00:00:00-05:00","description":"An easy to use blogging platform with support for Jupyter Notebooks.","headline":"Data Types Hacks","image":"https://willcyber.github.io/fastpages/images/chart-preview.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://willcyber.github.io/fastpages/tri3/2023/03/13/datahacks.html"},"url":"https://willcyber.github.io/fastpages/tri3/2023/03/13/datahacks.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/fastpages/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://willcyber.github.io/fastpages/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/fastpages/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/fastpages/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/fastpages/pbl/">PBL Notes</a><a class="page-link" href="/fastpages/cb/">College Board</a><a class="page-link" href="/fastpages/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Data Types Hacks</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-03-13T00:00:00-05:00" itemprop="datePublished">
+        Mar 13, 2023
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      4 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/fastpages/categories/#tri3">tri3</a>
+        
+      
+      </p>
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/willcyber/fastpages/tree/master/_notebooks/2023-03-13-datahacks.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/fastpages/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/willcyber/fastpages/master?filepath=_notebooks%2F2023-03-13-datahacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/willcyber/fastpages/blob/master/_notebooks/2023-03-13-datahacks.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/fastpages/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+          <div class="px-2">
+  <a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2Fwillcyber%2Ffastpages%2Fblob%2Fmaster%2F_notebooks%2F2023-03-13-datahacks.ipynb" target="_blank">
+      <img class="notebook-badge-image" src="/fastpages/assets/badges/deepnote.svg" alt="Launch in Deepnote"/>
+  </a>
+</div>
+
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h2"><a href="#Primatives">Primatives </a></li>
+<li class="toc-entry toc-h2"><a href="#Wrapper-Class">Wrapper Class </a></li>
+<li class="toc-entry toc-h2"><a href="#Methods-and-Control-Structures">Methods and Control Structures </a></li>
+<li class="toc-entry toc-h2"><a href="#Math.random">Math.random </a></li>
+<li class="toc-entry toc-h2"><a href="#DoNothingByValue">DoNothingByValue </a></li>
+<li class="toc-entry toc-h2"><a href="#IntByReference">IntByReference </a></li>
+<li class="toc-entry toc-h2"><a href="#Menu">Menu </a></li>
+</ul><!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/2023-03-13-datahacks.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Primatives">
+<a class="anchor" href="#Primatives" aria-hidden="true"><span class="octicon octicon-link"></span></a>Primatives<a class="anchor-link" href="#Primatives"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// int</span>
+
+<span class="kt">int</span><span class="o">[]</span> <span class="n">intArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">intArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+4
+6
+5
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// double</span>
+
+<span class="kt">double</span><span class="o">[]</span> <span class="n">doubleArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">intArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">doubleArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">doubleArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="n">d1</span> <span class="o">=</span> <span class="mf">1.23</span><span class="p">;</span>
+<span class="kt">double</span> <span class="n">d2</span> <span class="o">=</span> <span class="mf">1.23</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d1</span><span class="o">==</span><span class="n">d2</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7.301043248071254
+3.9008856742247797
+9.461633641089941
+6.668201382560991
+0.853542092221744
+true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//bool</span>
+
+<span class="kt">boolean</span> <span class="n">tof</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">tof</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"bool is true"</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>bool is true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//char</span>
+
+<span class="kt">char</span> <span class="n">letter</span> <span class="o">=</span> <span class="sc">'h'</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">letter2</span> <span class="o">=</span> <span class="sc">'e'</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">letter3</span> <span class="o">=</span> <span class="sc">'l'</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">letter4</span> <span class="o">=</span> <span class="sc">'o'</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">word</span> <span class="o">=</span> <span class="s">""</span> <span class="o">+</span> <span class="n">letter</span> <span class="o">+</span> <span class="n">letter2</span> <span class="o">+</span> <span class="n">letter3</span> <span class="o">+</span> <span class="n">letter3</span> <span class="o">+</span> <span class="n">letter4</span><span class="p">;</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">word</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hello
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Wrapper-Class">
+<a class="anchor" href="#Wrapper-Class" aria-hidden="true"><span class="octicon octicon-link"></span></a>Wrapper Class<a class="anchor-link" href="#Wrapper-Class"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Integer</span>
+
+<span class="n">Integer</span><span class="o">[]</span> <span class="n">intArray</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Integer</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">intArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">10</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">intArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>2
+5
+7
+4
+3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">// double</span>
+
+<span class="kt">double</span><span class="o">[]</span> <span class="n">doubleArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">intArray</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">doubleArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span><span class="mi">10</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">doubleArray</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">Double</span>  <span class="n">d3</span> <span class="o">=</span> <span class="mf">1.23</span><span class="p">;</span>
+<span class="n">Double</span> <span class="n">d4</span> <span class="o">=</span> <span class="mf">1.23</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">d3</span><span class="o">==</span><span class="n">d4</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>7.5698481641159185
+2.086576518913615
+8.956948380868376
+7.035930903235372
+2.0862771279196535
+false
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Boolean</span>
+
+<span class="n">Boolean</span> <span class="n">b1</span> <span class="o">=</span> <span class="n">Boolean</span><span class="p">.</span><span class="na">TRUE</span><span class="p">;</span>
+<span class="n">Boolean</span> <span class="n">b2</span> <span class="o">=</span> <span class="n">Boolean</span><span class="p">.</span><span class="na">FALSE</span><span class="p">;</span>
+<span class="n">Boolean</span> <span class="n">b3</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b1</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b2</span><span class="p">);</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b3</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>true
+false
+true
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="c1">//Character</span>
+
+<span class="n">Character</span> <span class="n">letter</span> <span class="o">=</span> <span class="sc">'h'</span><span class="p">;</span>
+<span class="n">Character</span> <span class="n">letter2</span> <span class="o">=</span> <span class="sc">'e'</span><span class="p">;</span>
+<span class="n">Character</span> <span class="n">letter3</span> <span class="o">=</span> <span class="sc">'l'</span><span class="p">;</span>
+<span class="n">Character</span> <span class="n">letter4</span> <span class="o">=</span> <span class="sc">'o'</span><span class="p">;</span>
+<span class="n">String</span> <span class="n">word</span> <span class="o">=</span> <span class="k">new</span> <span class="n">StringBuilder</span><span class="p">().</span><span class="na">append</span><span class="p">(</span><span class="n">letter</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">letter2</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">letter3</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">letter3</span><span class="p">).</span><span class="na">append</span><span class="p">(</span><span class="n">letter4</span><span class="p">).</span><span class="na">toString</span><span class="p">();</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">word</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>hello
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Methods-and-Control-Structures">
+<a class="anchor" href="#Methods-and-Control-Structures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods and Control Structures<a class="anchor-link" href="#Methods-and-Control-Structures"> </a>
+</h2>
+<p>Methods take in an input and output a value. They can be called from other parts of the code.</p>
+<p>Control Structures allow users to specify what actions occur in what conditions. Some examples inclue for loops and if else statements.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Diverse Arrays and Matrix include both methods and control strucutures.</p>
+<p>For example, matrix includes the method String toString() and multiple for loops.</p>
+<p>There are multiple data type examples in their code. Uses int and String.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Math.random">
+<a class="anchor" href="#Math.random" aria-hidden="true"><span class="octicon octicon-link"></span></a>Math.random<a class="anchor-link" href="#Math.random"> </a>
+</h2>
+<ul>
+<li>Math.random() * 10, random numbers between 0 and 10 (not includng 10)</li>
+<li>returns double</li>
+<li>if you want it in int add (int) to the front of Math.random()</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="DoNothingByValue">
+<a class="anchor" href="#DoNothingByValue" aria-hidden="true"><span class="octicon octicon-link"></span></a>DoNothingByValue<a class="anchor-link" href="#DoNothingByValue"> </a>
+</h2>
+<ul>
+<li>Essentially this code shows the differenc between passing by value and by reference</li>
+<li>the main method calls multiple methods with different paramteter types</li>
+<li>integer array "arr" defined</li>
+<li>inter value "val" defined</li>
+<li>"word" defined as first 5 char of input string</li>
+<li>all elements of arr set to 0</li>
+<li>print arr elememnts through for loop</li>
+<li>changeIt essentially shows that passing parameters by value does not modify the original values of the variables. The method creates a new integer array of length 5, sets val to 0, and sets word to the first 5 characters of the input string. Then, it initializes all elements of the arr array to 0 and prints the array elements and word using a for loop.</li>
+<li>changeIt2 has the same purpose as changeIt. It creates a new integer array of length 5, sets value to 0, and sets name to the first 5 characters of the input string. Then, it initializes all elements of the nums array to 0 and prints the array elements and name using a for loop.</li>
+<li>changeIt3 and 4 both demonstrate that it is possible to change values by returning a new value. changeIt3 creates a new string that is the first 5 characters of the input string and initializes all elements of the arr array to 0. Then, it prints the array elements and the new string while changeIt4 creates a new integer array of length 5, sets the integer value to 0, and sets the string value to the first 5 characters of the input string. Then, it initializes all elements of the integer array to 0 and prints the array elements and the string.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="IntByReference">
+<a class="anchor" href="#IntByReference" aria-hidden="true"><span class="octicon octicon-link"></span></a>IntByReference<a class="anchor-link" href="#IntByReference"> </a>
+</h2>
+<ul>
+<li>the method swapToLowHighOrder() basically swaps the value fiels of two objects if this.value &gt; i.value</li>
+<li>the static swapper() method takes two integer arguments n0 and n1. This method creates two IntByReference objects, a and b, with n0 and n1 as their values, respectively. It then calls the swapToLowHighOrder() method on a, passing in b as an argument. Finally, it prints the values of a and b before and after the swap.</li>
+<li>main() calls sweeper 3 times with different values</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Menu">
+<a class="anchor" href="#Menu" aria-hidden="true"><span class="octicon octicon-link"></span></a>Menu<a class="anchor-link" href="#Menu"> </a>
+</h2>
+<ul>
+<li>Try is literally used to catch errors in a block of code</li>
+<li>If there are errors in the try block, catch can catch the error and output an applicable error message to help debugging</li>
+<li>Runnable is used to store a class-method to be run when a title is selected from a menu. It will be executed when the correspinding MenuRow object is selected.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+  </div><!-- from https://github.com/utterance/utterances -->
+<script src="https://utteranc.es/client.js"
+        repo="willcyber/fastpages"
+        issue-term="title"
+        label="blogpost-comment"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script><a class="u-url" href="/fastpages/tri3/2023/03/13/datahacks.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/fastpages/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="https://willcyber.github.io/fastpages/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/fastpages/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
