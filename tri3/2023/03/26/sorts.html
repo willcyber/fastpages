@@ -153,6 +153,8 @@ window.onload = wrap_img;
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Sorts</span> <span class="p">{</span>
+
+    <span class="c1">//bubble</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">Bubble</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
         <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
@@ -164,14 +166,36 @@ window.onload = wrap_img;
             <span class="p">}</span>
         <span class="p">}</span>
         <span class="p">}</span>
-        
+    <span class="p">}</span>
 
+    <span class="c1">//selection</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">Selection</span><span class="p">(</span><span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">min</span><span class="p">;</span>
+        <span class="kt">int</span> <span class="n">k</span><span class="p">;</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">min</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">j</span><span class="p">;</span>
+            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="p">(</span><span class="n">min</span> <span class="o">&gt;</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">)</span> <span class="p">{</span>
+                    <span class="n">min</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+                    <span class="n">k</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">k</span> <span class="o">!=</span> <span class="n">j</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">t</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">j</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span><span class="p">;</span>
+                <span class="n">arr</span><span class="o">[</span><span class="n">k</span><span class="o">]</span> <span class="o">=</span> <span class="n">t</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span> <span class="n">args</span><span class="o">[]</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">Sorts</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Sorts</span><span class="p">();</span>
         <span class="kt">int</span> <span class="n">arr</span><span class="o">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">};</span>
-        <span class="n">obj</span><span class="p">.</span><span class="na">Bubble</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
+        <span class="c1">// obj.Bubble(arr);</span>
+        <span class="n">obj</span><span class="p">.</span><span class="na">Selection</span><span class="p">(</span><span class="n">arr</span><span class="p">);</span>
         <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">arr</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
@@ -192,7 +216,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>8 7 4 2 1 </pre>
+<pre>1 2 4 7 8 </pre>
 </div>
 </div>
 
