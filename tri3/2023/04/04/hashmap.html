@@ -380,24 +380,16 @@ Animal: Robin, Red, 7
         <span class="c1">// Hashmap lookup</span>
         <span class="kt">int</span> <span class="n">rand</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">)</span> <span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="o">*</span><span class="mi">5000</span><span class="p">);</span>
 
+        <span class="kt">long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
         <span class="k">for</span> <span class="p">(</span><span class="n">Integer</span> <span class="n">key</span> <span class="p">:</span> <span class="n">pets</span><span class="p">.</span><span class="na">names</span><span class="p">.</span><span class="na">keySet</span><span class="p">())</span> <span class="p">{</span>
-            <span class="kt">long</span> <span class="n">startTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">();</span>
-            <span class="kt">long</span> <span class="n">elapsedTime</span><span class="p">;</span> 
             <span class="k">if</span> <span class="p">(</span><span class="n">key</span><span class="o">==</span><span class="n">rand</span><span class="p">)</span> <span class="p">{</span>
-                <span class="n">elapsedTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">()</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">;</span>
-                <span class="c1">// System.out.println(startTime); </span>
-                <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">elapsedTime</span><span class="p">);</span> 
+                <span class="k">break</span><span class="p">;</span>
             <span class="p">}</span>
-            
-            
         <span class="p">}</span>
+        <span class="kt">long</span> <span class="n">elapsedTime</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">nanoTime</span><span class="p">()</span> <span class="o">-</span> <span class="n">startTime</span><span class="p">;</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">elapsedTime</span><span class="p">);</span> 
 
-        
-
-        <span class="c1">// testing to see if it actually added</span>
-        <span class="c1">// for (Integer key : pets.names.keySet()) {</span>
-        <span class="c1">//     System.out.println(key + ": " + pets.names.get(key));</span>
-        <span class="c1">// }</span>
+    
     <span class="p">}</span>
 <span class="p">}</span>
 
@@ -414,8 +406,7 @@ Animal: Robin, Red, 7
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>179760320147100
-0
+<pre>123300
 </pre>
 </div>
 </div>
