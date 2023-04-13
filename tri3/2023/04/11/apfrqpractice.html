@@ -130,7 +130,8 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h2"><a href="#1-a">1 a </a></li>
 <li class="toc-entry toc-h2"><a href="#1-b">1 b </a></li>
-<li class="toc-entry toc-h2"><a href="#2-a">2 a </a></li>
+<li class="toc-entry toc-h2"><a href="#2">2 </a></li>
+<li class="toc-entry toc-h2"><a href="#3-a">3 a </a></li>
 </ul>
 </li>
 </ul><!--
@@ -267,8 +268,8 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2-a">
-<a class="anchor" href="#2-a" aria-hidden="true"><span class="octicon octicon-link"></span></a>2 a<a class="anchor-link" href="#2-a"> </a>
+<h2 id="2">
+<a class="anchor" href="#2" aria-hidden="true"><span class="octicon octicon-link"></span></a>2<a class="anchor-link" href="#2"> </a>
 </h2>
 </div>
 </div>
@@ -325,6 +326,46 @@ window.onload = wrap_img;
 <li>the super in the constructor does not need to redefine bookTItle as String, etc</li>
 <li>forgot the return in getBookInfo()</li>
 <li>if else not needed</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="3-a">
+<a class="anchor" href="#3-a" aria-hidden="true"><span class="octicon octicon-link"></span></a>3 a<a class="anchor-link" href="#3-a"> </a>
+</h2>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kt">double</span> <span class="n">store</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">allReviews</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">double</span> <span class="n">store</span> <span class="o">+=</span> <span class="n">allReviews</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="n">store</span><span class="o">/</span><span class="n">allReviews</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>forgot the .getRating()</li>
 </ul>
 
 </div>
