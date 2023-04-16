@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      9 min read
     
 </span></p>
 
@@ -243,6 +243,15 @@ window.onload = wrap_img;
      <span class="p">{</span>
          <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">nextNode</span><span class="p">;</span>
      <span class="p">}</span>
+
+     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setNext</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">next</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="na">nextNode</span> <span class="o">=</span> <span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// public void setNext(T data) {</span>
+    <span class="c1">//     this.nextNode = new LinkedList&lt;&gt;(data);</span>
+    <span class="c1">// }</span>
+    
  
  <span class="p">}</span>
 </pre></div>
@@ -683,21 +692,101 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Merge</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">Comparable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="kd">extends</span> <span class="n">Sorter</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
-    <span class="kd">public</span> <span class="nf">Insertion</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">(</span><span class="s">"Insertion Sort"</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="cm">/**</span>
+
+<span class="cm">A class representing the Merge Sort algorithm for sorting a Queue of elements</span>
+
+<span class="cm">@param &lt;T&gt; The type of elements in the Queue, must implement Comparable</span>
+<span class="cm">*/</span>
+<span class="kd">class</span> <span class="nc">Merge</span><span class="o">&lt;</span><span class="n">T</span> <span class="kd">extends</span> <span class="n">Comparable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span> <span class="kd">extends</span> <span class="n">Sorter</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span>
+
+    <span class="cm">/**</span>
+<span class="cm">    </span>
+<span class="cm">    Creates a new instance of Merge Sort</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="nf">Merge</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">super</span><span class="p">(</span><span class="s">"Merge Sort"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="cm">/**</span>
+<span class="cm">    </span>
+<span class="cm">    Sorts the given Queue of elements using Merge Sort algorithm</span>
+<span class="cm">    @param q The Queue of elements to be sorted</span>
+<span class="cm">    @param verbose A boolean indicating whether to print out the sorting process or not</span>
+<span class="cm">    @return The sorted Queue of elements</span>
+<span class="cm">    */</span>
+    <span class="kd">public</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">sort</span><span class="p">(</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">verbose</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">super</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
+    <span class="n">q</span><span class="p">.</span><span class="na">setHead</span><span class="p">(</span><span class="n">mergeSort</span><span class="p">(</span><span class="n">q</span><span class="p">.</span><span class="na">getHead</span><span class="p">()));</span>
+    <span class="kd">super</span><span class="p">.</span><span class="na">end</span><span class="p">();</span>
+    <span class="k">return</span> <span class="n">q</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Base case: if the linked list is empty or has only one element</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="kc">null</span> <span class="o">||</span> <span class="n">head</span><span class="p">.</span><span class="na">getNext</span><span class="p">()</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>
     <span class="p">}</span>
     
-    <span class="kd">public</span> <span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">sort</span><span class="p">(</span><span class="n">Queue</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">q</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">verbose</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">super</span><span class="p">.</span><span class="na">start</span><span class="p">();</span>
-        <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">current</span> <span class="o">=</span> <span class="n">q</span><span class="p">.</span><span class="na">getHead</span><span class="p">().</span><span class="na">getNext</span><span class="p">();</span>
-        
-        <span class="k">while</span> <span class="p">(</span><span class="n">current</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
-            <span class="c1">//</span>
+    <span class="c1">// Find the middle node of the linked list</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">middle</span> <span class="o">=</span> <span class="n">getMiddle</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">nextOfMiddle</span> <span class="o">=</span> <span class="n">middle</span><span class="p">.</span><span class="na">getNext</span><span class="p">();</span>
+    <span class="n">middle</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+    
+    <span class="c1">// Recursively sort the left and right halves of the linked list</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">left</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">head</span><span class="p">);</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">right</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">nextOfMiddle</span><span class="p">);</span>
+    
+    <span class="c1">// Merge the two sorted halves of the linked list</span>
+    <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">getMiddle</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">head</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Base case: if the linked list is empty</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">head</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">head</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// Initialize two pointers: slow and fast</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">slow</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">fast</span> <span class="o">=</span> <span class="n">head</span><span class="p">;</span>
+    
+    <span class="c1">// Traverse the linked list using two pointers:</span>
+    <span class="c1">// slow moves one node at a time, while fast moves two nodes at a time</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">fast</span><span class="p">.</span><span class="na">getNext</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">&amp;&amp;</span> <span class="n">fast</span><span class="p">.</span><span class="na">getNext</span><span class="p">().</span><span class="na">getNext</span><span class="p">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">slow</span> <span class="o">=</span> <span class="n">slow</span><span class="p">.</span><span class="na">getNext</span><span class="p">();</span>
+    <span class="n">fast</span> <span class="o">=</span> <span class="n">fast</span><span class="p">.</span><span class="na">getNext</span><span class="p">().</span><span class="na">getNext</span><span class="p">();</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// The slow pointer is now pointing to the middle node of the linked list</span>
+    <span class="k">return</span> <span class="n">slow</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kd">private</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">merge</span><span class="p">(</span><span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">left</span><span class="p">,</span> <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">right</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">LinkedList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+    
+    <span class="c1">// Base case: if one of the linked lists is empty, return the other one</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">left</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">right</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="k">if</span> <span class="p">(</span><span class="n">right</span> <span class="o">==</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">left</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1">// Compare the first nodes of the left and right linked lists,</span>
+    <span class="c1">// and recursively merge the remaining halves until all nodes are merged</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">left</span><span class="p">.</span><span class="na">getData</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">right</span><span class="p">.</span><span class="na">getData</span><span class="p">())</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">left</span><span class="p">;</span>
+            <span class="n">result</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">.</span><span class="na">getNext</span><span class="p">(),</span> <span class="n">right</span><span class="p">));</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">right</span><span class="p">;</span>
+            <span class="n">result</span><span class="p">.</span><span class="na">setNext</span><span class="p">(</span><span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">.</span><span class="na">getNext</span><span class="p">()));</span>
         <span class="p">}</span>
-  
-        <span class="kd">super</span><span class="p">.</span><span class="na">end</span><span class="p">();</span>
-        <span class="k">return</span> <span class="n">q</span><span class="p">;</span>
+
+        <span class="kd">super</span><span class="p">.</span><span class="na">incrementswap</span><span class="p">();</span>
+        <span class="kd">super</span><span class="p">.</span><span class="na">incrementcompare</span><span class="p">();</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -741,8 +830,8 @@ window.onload = wrap_img;
         <span class="n">sorters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">BubbleSorter</span><span class="o">&lt;&gt;</span><span class="p">());</span>
         <span class="n">sorters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Selection</span><span class="o">&lt;&gt;</span><span class="p">());</span>
         <span class="n">sorters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Insertion</span><span class="o">&lt;&gt;</span><span class="p">());</span>
-        <span class="c1">// sorters.add(new Merge&lt;&gt;());</span>
-        <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
+        <span class="n">sorters</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span> <span class="n">Merge</span><span class="o">&lt;&gt;</span><span class="p">());</span>
+        <span class="kt">int</span> <span class="n">size</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
         <span class="k">for</span> <span class="p">(</span><span class="n">Sorter</span> <span class="n">i</span> <span class="p">:</span> <span class="n">sorters</span><span class="p">)</span> <span class="p">{</span>
             <span class="kt">int</span> <span class="n">test</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
             <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Double</span><span class="o">&gt;</span><span class="p">();</span>
@@ -763,7 +852,7 @@ window.onload = wrap_img;
                 <span class="n">test</span><span class="o">++</span><span class="p">;</span>
             <span class="p">}</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Average Elapsed time: %.10fs\n"</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span><span class="o">/</span><span class="mi">1000000000</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Average Elapsed time: %.10fs\n"</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span><span class="o">/</span><span class="mi">50000000</span><span class="p">);</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Average Number of compares: %.2f\n"</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">comp</span><span class="p">));</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Average Number of swaps: %.2f\n"</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">swap</span><span class="p">));</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
@@ -786,19 +875,24 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Bubble Sort
-Average Elapsed time: 0.8904194293s
-Average Number of compares: 1034540535.60
-Average Number of swaps: 262765782.40
+Average Elapsed time: 2.7631038000s
+Average Number of compares: 257923155.05
+Average Number of swaps: 65698019.25
 
 Selection Sort
-Average Elapsed time: 0.1914822103s
-Average Number of compares: 524947500.00
-Average Number of swaps: 104989.50
+Average Elapsed time: 1.1518930000s
+Average Number of compares: 131223750.00
+Average Number of swaps: 52489.50
 
 Insertion Sort
-Average Elapsed time: 0.2047961047s
-Average Number of compares: 261747188.15
-Average Number of swaps: 261642198.65
+Average Elapsed time: 0.5585216000s
+Average Number of compares: 65674515.00
+Average Number of swaps: 65622025.50
+
+Merge Sort
+Average Elapsed time: 0.0263578000s
+Average Number of compares: 580063.85
+Average Number of swaps: 580063.85
 
 
 </pre>
