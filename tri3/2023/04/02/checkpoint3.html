@@ -852,7 +852,7 @@ window.onload = wrap_img;
                 <span class="n">test</span><span class="o">++</span><span class="p">;</span>
             <span class="p">}</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">i</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
-            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Average Elapsed time: %.10fs\n"</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span><span class="o">/</span><span class="mi">50000000</span><span class="p">);</span>
+            <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Average Elapsed time: %.10fs\n"</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">elapsed</span><span class="p">)</span><span class="o">/</span><span class="mi">1000000000</span><span class="p">);</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Average Number of compares: %.2f\n"</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">comp</span><span class="p">));</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">"Average Number of swaps: %.2f\n"</span><span class="p">,</span> <span class="n">calcAvg</span><span class="p">(</span><span class="n">swap</span><span class="p">));</span>
             <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
@@ -875,24 +875,24 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Bubble Sort
-Average Elapsed time: 2.7631038000s
-Average Number of compares: 257923155.05
-Average Number of swaps: 65698019.25
+Average Elapsed time: 0.1399708400s
+Average Number of compares: 258080123.65
+Average Number of swaps: 65697475.40
 
 Selection Sort
-Average Elapsed time: 1.1518930000s
+Average Elapsed time: 0.0544021950s
 Average Number of compares: 131223750.00
 Average Number of swaps: 52489.50
 
 Insertion Sort
-Average Elapsed time: 0.5585216000s
-Average Number of compares: 65674515.00
-Average Number of swaps: 65622025.50
+Average Elapsed time: 0.0281362850s
+Average Number of compares: 65930296.10
+Average Number of swaps: 65877806.60
 
 Merge Sort
-Average Elapsed time: 0.0263578000s
-Average Number of compares: 580063.85
-Average Number of swaps: 580063.85
+Average Elapsed time: 0.0009457550s
+Average Number of compares: 579713.60
+Average Number of swaps: 579713.60
 
 
 </pre>
