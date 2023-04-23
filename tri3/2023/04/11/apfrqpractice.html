@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      3 min read
+      5 min read
     
 </span></p>
 
@@ -289,6 +289,40 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Book</span> <span class="p">{</span>
+    <span class="kd">private</span> <span class="n">String</span> <span class="n">title</span><span class="p">;</span>
+
+    <span class="kd">private</span> <span class="kt">double</span> <span class="n">price</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">bookTitle</span><span class="p">,</span> <span class="kt">double</span> <span class="n">bookPrice</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">bookTitle</span><span class="p">;</span>
+        <span class="n">price</span> <span class="o">=</span> <span class="n">bookPrice</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getTitle</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">title</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getBookInfo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">title</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">price</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Textbook</span> <span class="kd">extends</span> <span class="n">Book</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kt">int</span> <span class="n">edition</span><span class="p">;</span>
 
@@ -306,7 +340,7 @@ window.onload = wrap_img;
         <span class="c1">// return title + "-" + price + "-" + editionnum;</span>
     <span class="p">}</span>
 
-    <span class="kd">public</span> <span class="n">bool</span> <span class="nf">canSubsituteFor</span><span class="p">(</span><span class="n">Textbook</span> <span class="n">two</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">canSubsituteFor</span><span class="p">(</span><span class="n">Textbook</span> <span class="n">two</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">two</span><span class="p">.</span><span class="na">getTitle</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">getTitle</span><span class="p">())</span> <span class="o">&amp;&amp;</span> <span class="n">two</span><span class="p">.</span><span class="na">getEdition</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">getEditon</span><span class="p">())</span> <span class="p">{</span>
             <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
         <span class="p">}</span>
@@ -323,6 +357,36 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">super.getBookInfo() + "-" + edition</span><span class="ansi-black-intense-fg ansi-bold">;</span>
+<span class="ansi-red-intense-fg ansi-bold">not a statement</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">bool</span><span class="ansi-black-intense-fg ansi-bold"> canSubsituteFor(Textbook two) {</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   class bool</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">        if (two.getTitle().equals(getTitle()) &amp;&amp; two.getEdition() &lt;= </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">getEditon</span><span class="ansi-black-intense-fg ansi-bold">()) {</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   method getEditon()</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    public String getBookInfo() </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">{</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        super.getBookInfo() + "-" + edition;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">        // return title + "-" + price + "-" + editionnum;</span>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">    }</span>
+<span class="ansi-red-intense-fg ansi-bold">missing return statement</span>
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -331,14 +395,91 @@ window.onload = wrap_img;
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li>edition needs to be private</li>
-<li>the super in the constructor does not need to redefine bookTItle as String, etc</li>
+<li>the super in the constructor should not redefine bookTItle as String, etc</li>
 <li>forgot the return in getBookInfo()</li>
 <li>if else not needed</li>
+<li>misspelled getEdition()</li>
 </ul>
 
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Corrected code (essential parts)</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Textbook</span> <span class="kd">extends</span> <span class="n">Book</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="n">edition</span><span class="p">;</span>
+
+    <span class="kd">public</span> <span class="nf">Textbook</span><span class="p">(</span><span class="n">String</span> <span class="n">bookTitle</span><span class="p">,</span> <span class="kt">double</span> <span class="n">bookPrice</span><span class="p">,</span> <span class="kt">int</span> <span class="n">editionnum</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">super</span><span class="p">(</span><span class="n">bookTitle</span><span class="p">,</span> <span class="n">bookPrice</span><span class="p">);</span>
+        <span class="n">edition</span> <span class="o">=</span> <span class="n">editionnum</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">getEdition</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">edition</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="n">String</span> <span class="nf">getBookInfo</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="kd">super</span><span class="p">.</span><span class="na">getBookInfo</span><span class="p">()</span> <span class="o">+</span> <span class="s">"-"</span> <span class="o">+</span> <span class="n">edition</span><span class="p">;</span>
+        <span class="c1">// return title + "-" + price + "-" + editionnum;</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">canSubsituteFor</span><span class="p">(</span><span class="n">Textbook</span> <span class="n">two</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">two</span><span class="p">.</span><span class="na">getTitle</span><span class="p">().</span><span class="na">equals</span><span class="p">(</span><span class="n">getTitle</span><span class="p">())</span> <span class="o">&amp;&amp;</span> <span class="n">two</span><span class="p">.</span><span class="na">getEdition</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="k">this</span><span class="p">.</span><span class="na">getEdition</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="n">Textbook</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Textbook</span><span class="p">(</span><span class="s">"Harry Potter"</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">test</span><span class="p">.</span><span class="na">getBookInfo</span><span class="p">());</span>
+        
+    
+    <span class="p">}</span>
+
+    
+<span class="p">}</span>
+
+<span class="n">Textbook</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Harry Potter-5.0-3
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
