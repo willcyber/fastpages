@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Pop Quiz",
-            "content": "public class Book { String title; double uniqueid; int bookcount; public Book(String title) { this.title = title; } public String toString() { return (&quot;the title is&quot; + title); } public String gettitle() { return title; } public void generateuniqueid() { uniqueid = Math.random() * 1000; } public double getuniqueid() { return uniqueid; } public int getbookcount() { return bookcount; } public static void main(String[] args) { Book test = new Book(&quot;test&quot;); test.generateuniqueid(); System.out.println(test.getuniqueid()); System.out.println(test.getbookcount()); System.out.println(test.gettitle()); Book test2 = new Book(&quot;Harry Potter&quot;); test2.generateuniqueid(); System.out.println(test2.getuniqueid()); System.out.println(test2.getbookcount()); System.out.println(test2.gettitle()); } } Book.main(null); . 483.22098341171204 0 test 700.8401315754126 0 Harry Potter .",
+            "content": "public class Book { String title; double uniqueid; int bookcount; int number; public Book(String title) { this.title = title; } public String toString() { return (&quot;the title is&quot; + title + &quot;the unique id is&quot; + uniqueid + &quot;the bookcount is&quot; + bookcount); } public String gettitle() { return title; } public void generateuniqueid() { // uniqueid = Math.random() * 1000; uniqueid = System.currentTimeMillis() + Math.random(); } public double getuniqueid() { return uniqueid; } public int getbookcount() { return bookcount; } public static void main(String[] args) { Book test = new Book(&quot;test&quot;); test.generateuniqueid(); System.out.println(test.getuniqueid()); System.out.println(test.getbookcount()); System.out.println(test.gettitle()); Book test2 = new Book(&quot;Harry Potter&quot;); test2.generateuniqueid(); System.out.println(test2.getuniqueid()); System.out.println(test2.getbookcount()); System.out.println(test2.gettitle()); } } Book.main(null); . 1.6820926083556812E12 0 test 1.682092608357625E12 0 Harry Potter .",
             "url": "https://willcyber.github.io/fastpages/tri3/2023/04/20/popquiz.html",
             "relUrl": "/tri3/2023/04/20/popquiz.html",
             "date": " • Apr 20, 2023"
@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Pres 1",
-            "content": "Merge Sort . implement with recursive function | .",
+            "content": "Merge Sort . implement with recursive function | . int sum = 0; public void recursionex(int n) { sum += n; System.out.println(sum); if (n&gt;15) { System.out.println(&quot;stop&quot;); } else { recursionex(n+1); } } recursionex(10); . 10 21 33 46 60 75 91 stop . //don&#39;t run lol int sum = 0; public void infiniteex(int n) { sum += n; System.out.println(sum); if (n&gt;15) { System.out.println(&quot;stop&quot;); } infiniteex(n+1); } // infiniteex(10); .",
             "url": "https://willcyber.github.io/fastpages/tri3/2023/04/18/pres1.html",
             "relUrl": "/tri3/2023/04/18/pres1.html",
             "date": " • Apr 18, 2023"

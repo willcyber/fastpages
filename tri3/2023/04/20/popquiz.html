@@ -146,13 +146,14 @@ window.onload = wrap_img;
     <span class="n">String</span> <span class="n">title</span><span class="p">;</span>
     <span class="kt">double</span> <span class="n">uniqueid</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">bookcount</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">number</span><span class="p">;</span>
 
     <span class="kd">public</span> <span class="nf">Book</span><span class="p">(</span><span class="n">String</span> <span class="n">title</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">this</span><span class="p">.</span><span class="na">title</span> <span class="o">=</span> <span class="n">title</span><span class="p">;</span>
     <span class="p">}</span>
  
     <span class="kd">public</span> <span class="n">String</span> <span class="nf">toString</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="p">(</span><span class="s">"the title is"</span> <span class="o">+</span> <span class="n">title</span><span class="p">);</span>
+        <span class="k">return</span> <span class="p">(</span><span class="s">"the title is"</span> <span class="o">+</span> <span class="n">title</span> <span class="o">+</span> <span class="s">"the unique id is"</span> <span class="o">+</span> <span class="n">uniqueid</span> <span class="o">+</span> <span class="s">"the bookcount is"</span> <span class="o">+</span> <span class="n">bookcount</span><span class="p">);</span>
         
     <span class="p">}</span>
 
@@ -161,7 +162,9 @@ window.onload = wrap_img;
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">generateuniqueid</span><span class="p">()</span> <span class="p">{</span>
-        <span class="n">uniqueid</span> <span class="o">=</span> <span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">;</span>
+        <span class="c1">// uniqueid = Math.random() * 1000;</span>
+        <span class="n">uniqueid</span> <span class="o">=</span> <span class="n">System</span><span class="p">.</span><span class="na">currentTimeMillis</span><span class="p">()</span> <span class="o">+</span> <span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">();</span>
+        
     <span class="p">}</span>
 
     <span class="kd">public</span> <span class="kt">double</span> <span class="nf">getuniqueid</span><span class="p">()</span> <span class="p">{</span>
@@ -205,10 +208,10 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>483.22098341171204
+<pre>1.6820926083556812E12
 0
 test
-700.8401315754126
+1.682092608357625E12
 0
 Harry Potter
 </pre>
