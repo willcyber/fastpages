@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      4 min read
+      3 min read
     
 </span></p>
 
@@ -495,8 +495,7 @@ window.onload = wrap_img;
 <span class="p">{</span>
 
 <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="n">memberList</span><span class="p">;</span>
-<span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="n">filler</span><span class="p">;</span>
-<span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="n">filler</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span><span class="p">();</span>
 
 <span class="kd">public</span> <span class="nf">ClubMembers</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">memberList</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span><span class="p">();</span>
@@ -515,41 +514,16 @@ window.onload = wrap_img;
 <span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="nf">removeMembers</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">//b</span>
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">memberList</span><span class="p">.</span><span class="na">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">if</span> <span class="p">(</span><span class="n">memberList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getGradYear</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">year</span> <span class="o">&amp;&amp;</span> <span class="n">memberList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">inGoodStanding</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">memberList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getGradYear</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">memberList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">inGoodStanding</span><span class="p">())</span> <span class="p">{</span>
                 <span class="n">MemberInfo</span> <span class="n">print</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MemberInfo</span><span class="p">(</span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span> <span class="n">gradYear</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
                 <span class="n">filler</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">print</span><span class="p">);</span> 
             <span class="p">}</span>
-            <span class="n">memberList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">k</span><span class="p">);</span>
-            <span class="n">i</span><span class="o">--</span><span class="p">;</span>
+            <span class="n">memberList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
         <span class="p">}</span>
     <span class="p">}</span>
     <span class="k">return</span> <span class="n">filler</span><span class="p">;</span>
 <span class="p">}</span>
-
-<span class="c1">// public static void main(String[] args) {</span>
-<span class="c1">//     ClubMembers club = new ClubMembers();</span>
-
-<span class="c1">//     String[] names = {"Alice", "Bob", "Charlie", "David", "Eve"};</span>
-<span class="c1">//     club.addMembers(names, 2023);</span>
-
-<span class="c1">//     System.out.println("Members added:");</span>
-<span class="c1">//     for (MemberInfo member : club.memberList) {</span>
-<span class="c1">//         System.out.println(member.getName() + " " + member.getGradYear() + " " + member.inGoodStanding());</span>
-<span class="c1">//     }</span>
-
-<span class="c1">//     ArrayList&lt;MemberInfo&gt; removedMembers = club.removeMembers(2023);</span>
-
-<span class="c1">//     System.out.println("Members removed:");</span>
-<span class="c1">//     for (MemberInfo member : removedMembers) {</span>
-<span class="c1">//         System.out.println(member.getName() + " " + member.getGradYear() + " " + member.inGoodStanding());</span>
-<span class="c1">//     }</span>
-
-<span class="c1">//     System.out.println("Remaining members:");</span>
-<span class="c1">//     for (MemberInfo member : club.memberList) {</span>
-<span class="c1">//         System.out.println(member.getName() + " " + member.getGradYear() + " " + member.inGoodStanding());</span>
-<span class="c1">//     }</span>
-<span class="c1">// }</span>
 
 <span class="p">}</span>
 <span class="n">ClubMembers</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
@@ -603,6 +577,17 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Issues</p>
+<ul>
+<li>going from 0 to memberList.size() will not work because we wouldc be remoing the indexes which would screw up the indexes for the rest. Better to start at the back</li>
+</ul>
+
+</div>
+</div>
+</div>
 </div>
 
 
