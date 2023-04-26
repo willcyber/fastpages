@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Arrays and Arraylists",
-            "content": "2018 . 4a . int[] fill = new int[arr2D.length]; for (int i=0; i&lt;arr2D.length; i++) { fill[i] = arr2D[i][c]; } return fill; . 4b first row no dup vales all values in first row apear in each row allvalues in first row appear in each column . int[] row = new int[array2D[0].length]; int[] row2 = new int[array2D[0].length]; for (int i=0; i&lt;array2D[0].length; i++) { row[] = array2D[0][i]; } if (!this.containsDuplicates(row[])) { return false; } for (int i=0; i&lt;arr2D.length; i++) { for (int j=0; j&lt;array2D[0].length; j++) { row2[] = array2D[i][j]; if (!this.hasallValues(row[], row2[])) { return false; } } } //add for loop and do the getcolumn thing if (!this.) .",
+            "content": "2018 . 4a . int[] fill = new int[arr2D.length]; for (int i=0; i&lt;arr2D.length; i++) { fill[i] = arr2D[i][c]; } return fill; . 4b first row no dup vales all values in first row apear in each row allvalues in first row appear in each column . if (this.containsDuplicates(square[0])) { return false; } for (int r = 1; r &lt; square.length; r++) { if (!hasAllValues(square[0], square[r])) { return false; } } for (int i=0; i&lt;square[0].length; i++) { if (!this.hasAllValues(square[0], getColumn(square, i))) { return false; } } return true; .",
             "url": "https://willcyber.github.io/fastpages/tri3/2023/04/25/arraysarraylist.html",
             "relUrl": "/tri3/2023/04/25/arraysarraylist.html",
             "date": " • Apr 25, 2023"
