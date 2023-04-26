@@ -192,7 +192,7 @@ allvalues in first row appear in each column</p>
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">containsDuplicates</span><span class="p">(</span><span class="n">square</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span> <span class="p">{</span>
+<div class=" highlight hl-java"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">containsDuplicates</span><span class="p">(</span><span class="n">square</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">))</span> <span class="p">{</span>
     <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -203,7 +203,7 @@ allvalues in first row appear in each column</p>
 <span class="p">}</span>
  
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">square</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="na">hasAllValues</span><span class="p">(</span><span class="n">square</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">getColumn</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">i</span><span class="p">)))</span> <span class="p">{</span>
+   <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">hasAllValues</span><span class="p">(</span><span class="n">square</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">,</span> <span class="n">getColumn</span><span class="p">(</span><span class="n">square</span><span class="p">,</span> <span class="n">i</span><span class="p">)))</span> <span class="p">{</span>
     <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="p">}</span>
@@ -212,6 +212,37 @@ allvalues in first row appear in each column</p>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    if (</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">this</span><span class="ansi-black-intense-fg ansi-bold">.containsDuplicates(square[0])) {</span>
+<span class="ansi-red-intense-fg ansi-bold">non-static variable this cannot be referenced from a static context</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    if (</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">this.containsDuplicates</span><span class="ansi-black-intense-fg ansi-bold">(square[0])) {</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol: method containsDuplicates(int[])</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">if (!</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">hasAllValues</span><span class="ansi-black-intense-fg ansi-bold">(square[0], square[r])) {</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   method hasAllValues(int[],int[])</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">   if (!</span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">this</span><span class="ansi-black-intense-fg ansi-bold">.hasAllValues(square[0], getColumn(square, i))) {</span>
+<span class="ansi-red-intense-fg ansi-bold">non-static variable this cannot be referenced from a static context</span>
+
+<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">   if (!this.hasAllValues(square[0], </span><span class="ansi-black-intense-fg ansi-red-bg ansi-bold">getColumn</span><span class="ansi-black-intense-fg ansi-bold">(square, i))) {</span>
+<span class="ansi-red-intense-fg ansi-bold">cannot find symbol</span>
+<span class="ansi-red-intense-fg ansi-bold">  symbol:   method getColumn(int[][],int)</span>
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
