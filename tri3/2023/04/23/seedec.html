@@ -423,7 +423,7 @@ window.onload = wrap_img;
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>the prop is 0.096
+<pre>the prop is 0.0
 </pre>
 </div>
 </div>
@@ -453,14 +453,16 @@ window.onload = wrap_img;
 <div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MemberInfo</span>
 
 <span class="p">{</span>
-
+<span class="kd">private</span> <span class="n">String</span> <span class="n">n</span><span class="p">;</span>
+<span class="kd">private</span> <span class="kt">int</span> <span class="n">gy</span><span class="p">;</span>
+<span class="kd">private</span> <span class="kt">boolean</span> <span class="n">hgs</span><span class="p">;</span>
 <span class="kd">public</span> <span class="nf">MemberInfo</span><span class="p">(</span><span class="n">String</span> <span class="n">name</span><span class="p">,</span> <span class="kt">int</span> <span class="n">gradYear</span><span class="p">,</span> <span class="kt">boolean</span> <span class="n">hasGoodStanding</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">n</span> <span class="o">=</span> <span class="n">name</span><span class="p">;</span>
     <span class="n">gy</span> <span class="o">=</span> <span class="n">gradYear</span><span class="p">;</span>
     <span class="n">hgs</span> <span class="o">=</span> <span class="n">hasGoodStanding</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="kd">public</span> <span class="kt">int</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
+<span class="kd">public</span> <span class="n">String</span> <span class="nf">getName</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="n">n</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -526,51 +528,9 @@ window.onload = wrap_img;
 <span class="p">}</span>
 
 <span class="p">}</span>
-<span class="n">ClubMembers</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public class MemberInfo</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">{</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public MemberInfo(String name, int gradYear, boolean hasGoodStanding) {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    n = name;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    gy = gradYear;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    hgs = hasGoodStanding;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public int getName() {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    return n;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public int getGradYear() {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    return gy;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">public boolean inGoodStanding() {</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">    return hgs;</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span>
-<span class="ansi-black-intense-fg ansi-bold">|   </span><span class="ansi-black-intense-fg ansi-bold">}</span>
-<span class="ansi-red-intense-fg ansi-bold">Unresolved dependencies:</span>
-<span class="ansi-red-intense-fg ansi-bold">   - variable n</span>
-<span class="ansi-red-intense-fg ansi-bold">   - variable gy</span>
-<span class="ansi-red-intense-fg ansi-bold">   - variable hgs</span></pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -619,7 +579,11 @@ window.onload = wrap_img;
     <span class="c1">//a</span>
     
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">names</span><span class="p">.</span><span class="na">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// For testing purposes</span>
         <span class="n">MemberInfo</span> <span class="n">add</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MemberInfo</span><span class="p">(</span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span> <span class="n">gradYear</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">.</span><span class="na">compareTo</span><span class="p">(</span><span class="s">"Aidan"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">add</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MemberInfo</span><span class="p">(</span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span> <span class="n">gradYear</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span>
+        <span class="p">}</span>
         <span class="n">memberList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">add</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -629,7 +593,7 @@ window.onload = wrap_img;
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="n">memberList</span><span class="p">.</span><span class="na">size</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">if</span> <span class="p">(</span><span class="n">memberList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getGradYear</span><span class="p">()</span> <span class="o">&lt;=</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">if</span> <span class="p">(</span><span class="n">memberList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">inGoodStanding</span><span class="p">())</span> <span class="p">{</span>
-                <span class="n">MemberInfo</span> <span class="n">print</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MemberInfo</span><span class="p">(</span><span class="n">names</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">,</span> <span class="n">gradYear</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+                <span class="n">MemberInfo</span> <span class="n">print</span> <span class="o">=</span> <span class="k">new</span> <span class="n">MemberInfo</span><span class="p">(</span><span class="n">memberList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getName</span><span class="p">(),</span> <span class="n">memberList</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">i</span><span class="p">).</span><span class="na">getGradYear</span><span class="p">(),</span> <span class="kc">true</span><span class="p">);</span>
                 <span class="n">filler</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">print</span><span class="p">);</span> 
             <span class="p">}</span>
             <span class="n">memberList</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
@@ -638,11 +602,56 @@ window.onload = wrap_img;
     <span class="k">return</span> <span class="n">filler</span><span class="p">;</span>
 <span class="p">}</span>
 
+<span class="c1">// extra get method</span>
+<span class="kd">public</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="nf">getMemberList</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="na">memberList</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">ClubMembers</span> <span class="n">test</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ClubMembers</span><span class="p">();</span>
+    <span class="n">String</span><span class="o">[]</span> <span class="n">names24</span> <span class="o">=</span> <span class="p">{</span><span class="s">"Aidan"</span><span class="p">,</span> <span class="s">"William"</span><span class="p">,</span> <span class="s">"Lily"</span><span class="p">,</span> <span class="s">"Serafina"</span><span class="p">};</span>
+    <span class="n">test</span><span class="p">.</span><span class="na">addMembers</span><span class="p">(</span><span class="n">names24</span><span class="p">,</span> <span class="mi">2024</span><span class="p">);</span>
+    <span class="n">String</span><span class="o">[]</span> <span class="n">names25</span> <span class="o">=</span> <span class="p">{</span><span class="s">"and"</span><span class="p">,</span> <span class="s">"people"</span><span class="p">,</span> <span class="s">"who"</span><span class="p">,</span> <span class="s">"graduates"</span><span class="p">,</span> <span class="s">"in"</span><span class="p">,</span> <span class="s">"2025"</span><span class="p">};</span>
+    <span class="n">test</span><span class="p">.</span><span class="na">addMembers</span><span class="p">(</span><span class="n">names25</span><span class="p">,</span> <span class="mi">2025</span><span class="p">);</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="n">enrolled</span> <span class="o">=</span> <span class="n">test</span><span class="p">.</span><span class="na">getMemberList</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Currently enrolled: "</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">MemberInfo</span> <span class="n">member</span><span class="p">:</span> <span class="n">enrolled</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">member</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">MemberInfo</span><span class="o">&gt;</span> <span class="n">graduated</span> <span class="o">=</span> <span class="n">test</span><span class="p">.</span><span class="na">removeMembers</span><span class="p">(</span><span class="mi">2024</span><span class="p">);</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Graduated with good standing (Aidan didn't): "</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">MemberInfo</span> <span class="n">member</span><span class="p">:</span> <span class="n">graduated</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">member</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">();</span>
+    <span class="n">enrolled</span> <span class="o">=</span> <span class="n">test</span><span class="p">.</span><span class="na">getMemberList</span><span class="p">();</span>
+    <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"Currently enrolled: "</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="n">MemberInfo</span> <span class="n">member</span><span class="p">:</span> <span class="n">enrolled</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">member</span><span class="p">.</span><span class="na">getName</span><span class="p">()</span> <span class="o">+</span> <span class="s">" "</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
 <span class="p">}</span>
 <span class="n">ClubMembers</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Currently enrolled: Aidan William Lily Serafina and people who graduates in 2025 
+Graduated with good standing (Aidan didn't): Serafina Lily William 
+Currently enrolled: and people who graduates in 2025 </pre>
+</div>
+</div>
+
 </div>
 </div>
 
